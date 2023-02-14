@@ -211,15 +211,15 @@
     "@vercel/nft" "^0.22.1"
     esbuild "^0.16.3"
 
-"@sveltejs/kit@^1.0.0":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.3.3.tgz#6d9fc7a02a845b49971037330d86907add4a18f9"
-  integrity sha512-z/Of+rnKhNCvFArymTpmiNsAZZnclD8qR9d/YZJi3ZziLh/OI7L/Ca8/n6Hnd5NqLKB6/NzOC0Fgr12VHMY3nQ==
+"@sveltejs/kit@1.5":
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.5.7.tgz#42e07664962befc678f400bdb1f05d0f908b8a29"
+  integrity sha512-5AscK8HJsjsFAS00leOA5eTYg7U6VW8uX2GHteeSP7vB3jNq2EP2MnpsOQV8ckTxJ0teeQJgRWAy/Wbaw1xAGw==
   dependencies:
     "@sveltejs/vite-plugin-svelte" "^2.0.0"
     "@types/cookie" "^0.5.1"
     cookie "^0.5.0"
-    devalue "^4.2.2"
+    devalue "^4.2.3"
     esm-env "^1.0.0"
     kleur "^4.1.5"
     magic-string "^0.27.0"
@@ -228,7 +228,7 @@
     set-cookie-parser "^2.5.1"
     sirv "^2.0.2"
     tiny-glob "^0.2.9"
-    undici "5.16.0"
+    undici "5.18.0"
 
 "@sveltejs/vite-plugin-svelte@^2.0.0":
   version "2.0.2"
@@ -548,10 +548,10 @@ detective@^5.2.1:
     defined "^1.0.0"
     minimist "^1.2.6"
 
-devalue@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/devalue/-/devalue-4.2.2.tgz#5d1ec7cbd82b7873460037f59a1ce834c0100b96"
-  integrity sha512-Pkwd8qrI9O20VJ14fBNHu+on99toTNZFbgWRpZbC0zbDXpnE2WHYcrC1fHhMsF/3Ee+2yaW7vEujAT7fCYgqrA==
+devalue@^4.2.3:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/devalue/-/devalue-4.3.0.tgz#d86db8fee63a70317c2355be0d3d1b4d8f89a44e"
+  integrity sha512-n94yQo4LI3w7erwf84mhRUkUJfhLoCZiLyoOZ/QFsDbcWNZePrLwbQpvZBUG2TNxwV3VjCKPxkiiQA6pe3TrTA==
 
 didyoumean@^1.2.2:
   version "1.2.2"
@@ -1482,10 +1482,10 @@ typescript@^4.9.3, typescript@^4.9.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
 
-undici@5.16.0:
-  version "5.16.0"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-5.16.0.tgz#6b64f9b890de85489ac6332bd45ca67e4f7d9943"
-  integrity sha512-KWBOXNv6VX+oJQhchXieUznEmnJMqgXMbs0xxH2t8q/FUAWSJvOSr/rMaZKnX5RIVq7JDn0JbP4BOnKG2SGXLQ==
+undici@5.18.0:
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-5.18.0.tgz#e88a77a74d991a30701e9a6751e4193a26fabda9"
+  integrity sha512-1iVwbhonhFytNdg0P4PqyIAXbdlVZVebtPDvuM36m66mRw4OGrCm2MYynJv/UENFLdP13J1nPVQzVE2zTs1OeA==
   dependencies:
     busboy "^1.6.0"
 
