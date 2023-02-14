@@ -1,0 +1,48 @@
+@font-face {
+	font-family: 'Open Sans Medium';
+	src: url('/fonts/OpenSans/OpenSans-Medium.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans Medium';
+	src: url('/fonts/OpenSans/OpenSans-Italic.ttf');
+	font-display: swap;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Open Sans Bold';
+	src: url('/fonts/OpenSans/OpenSans-Bold.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans Extra Bold';
+	src: url('/fonts/OpenSans/OpenSans-ExtraBold.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans Semi Bold';
+	src: url('/fonts/OpenSans/OpenSans-SemiBold.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans Condensed';
+	src: url('/fonts/OpenSans/OpenSans_Condensed-ExtraBold.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PT Serif Bold';
+	src: url('/fonts/OpenSans/PTSerif-Bold.ttf');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sofia Condensed';
+	src: url('/fonts/OpenSans/SofiaSansExtraCondensed-SemiBold.ttf');
+	font-display: swap;
+}
