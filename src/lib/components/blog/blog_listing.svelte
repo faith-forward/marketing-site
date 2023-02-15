@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { mediaUrl } from '$lib/config/media_config';
 	import formatDate from '$lib/util/formatDate';
 
 	export let cover: string;
@@ -12,7 +11,7 @@
 <li class="">
 	<a href={`/blog/${slug}`}>
 		<div class="flex flex-row rounded-lg card bg-white h-[220px] tablet:h-[160px]">
-			<img src={`${mediaUrl}${cover}`} alt={title} class="rounded-l-lg hidden tablet:flex" />
+			<img src={cover} alt={title} class="rounded-l-lg hidden tablet:flex" />
 			<div class="py-4 px-8 flex flex-col justify-between">
 				<div>
 					<h2 class="font-sans-bold text-lg">{title}</h2>

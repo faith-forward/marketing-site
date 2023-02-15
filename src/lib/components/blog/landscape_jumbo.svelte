@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { mediaUrl } from '$lib/config/media_config';
 	import getForegroundColor from '$lib/util/getForegroundColor';
 	import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
@@ -49,7 +48,7 @@
 		</div>
 	</div>
 	<!-- Blog Cover Image -->
-	<img src={`${mediaUrl}${image}`} alt={imageAlt} class="relative bottom-32 tablet:bottom-64" />
+	<img src={image} alt={imageAlt} class="relative bottom-32 tablet:bottom-64" />
 </div>
 
 <style>

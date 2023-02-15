@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { mediaUrl } from '$lib/config/media_config';
 	import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import Tag from './tag.svelte';
@@ -36,10 +35,10 @@
 			<span class="italic mr-4">{releaseDate}</span>
 			{readingTime}
 		</p>
-		<img src={`${mediaUrl}${image}`} alt={imageAlt} class="flex laptop:hidden mt-8" />
+		<img src={image} alt={imageAlt} class="flex laptop:hidden mt-8" />
 	</div>
 	<div class="flex-1 py-12 justify-center hidden laptop:flex" style={`background-color: ${color}`}>
-		<img src={`${mediaUrl}${image}`} alt={imageAlt} />
+		<img src={image} alt={imageAlt} />
 	</div>
 </div>
 
