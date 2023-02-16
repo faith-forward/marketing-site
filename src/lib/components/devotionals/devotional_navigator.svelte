@@ -47,9 +47,7 @@
 			aria-label="Year"
 			class="font-sans-semi text-boldGrey py-2 px-4 border-width-2 border-2 border-boldGrey"
 		>
-			{#each Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i) as y}
-				<option value={y}>{y}</option>
-			{/each}
+			<option value={2023}>2023</option>
 		</select>
 	</div>
 	<!-- <div class="bg-[#ddd] rounded-full px-4 flex items-center w-[400px]">
