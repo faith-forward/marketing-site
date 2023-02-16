@@ -1,13 +1,19 @@
 <script lang="ts">
+	import { lazyLoad } from '$lib/util/lazyLoad';
 	import Nav from './homepage_nav.svelte';
 </script>
 
 <div class="flex flex-col w-full bg-blue min-h-[100vh] overflow-hidden relative">
 	<Nav />
-	<img src="/images/blob1.svg" alt="Test" id="blob1" class="hidden tablet:flex" />
 	<img
-		src="/images/phone church.png"
-		alt=""
+		src="/images/blob1.svg"
+		alt="Cloud that encompasses the nav bar."
+		id="blob1"
+		class="hidden tablet:flex"
+	/>
+	<img
+		use:lazyLoad={'/images/phone church.webp'}
+		alt="Users experience a whole new world of Faith through a church inside of a phone."
 		id="church"
 		class="desktop:h-[960px] laptop:h-[600px] desktop:mr-[64px] big-laptop:h-[700px] hidden laptop:flex"
 	/>
@@ -34,17 +40,30 @@
 				</span>
 			</p>
 		</div>
-		<img src="/images/phone church mobile.png" alt="Test" class="laptop:hidden" />
+		<img
+			use:lazyLoad={'https://storage.googleapis.com/faith-forward-media/medium_phone_church_9b0639de61/medium_phone_church_9b0639de61.webp'}
+			alt="Users experience a whole new world of Faith through a church inside of a phone."
+			class="laptop:hidden"
+		/>
 		<a
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
 			class="self-center laptop:hidden"
+			aria-label="Download the app"
 		>
 			<button class="py-4 px-8 bg-white text-red font-sans-bold mb-24 mt-4 rounded-full">
 				Download the app
 			</button>
 		</a>
-		<a href="https://apps.apple.com/us/app/faith-forward/id1661516199">
-			<img src="/images/frame.png" alt="" class="w-48 mb-24 hidden laptop:flex" />
+		<a
+			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
+			class="w-48 mb-24"
+			aria-label="Download the app"
+		>
+			<img
+				use:lazyLoad={'/images/Faith Forward QR Code.webp'}
+				alt="QR Code that will take you to the Faith Forward App on the iOS app store. Click to download."
+				class="w-48 hidden laptop:flex"
+			/>
 		</a>
 	</div>
 </div>

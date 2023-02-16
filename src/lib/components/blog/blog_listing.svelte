@@ -9,9 +9,15 @@
 </script>
 
 <li class="">
-	<a href={`/blog/${slug}`}>
-		<div class="flex flex-row rounded-lg card bg-white h-[220px] tablet:h-[160px]">
-			<img src={cover} alt={title} class="rounded-l-lg hidden tablet:flex" />
+	<a href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
+		<div
+			class="flex flex-row rounded-lg card bg-white h-[220px] tablet:h-[200px] desktop:h-[180px] overflow-scroll"
+		>
+			<img
+				src={cover}
+				alt={title}
+				class="rounded-l-lg hidden tablet:flex desktop:w-[180px] desktop:h-[180px] big-laptop:w-[200px] big-laptop:w-[160px]"
+			/>
 			<div class="py-4 px-8 flex flex-col justify-between">
 				<div>
 					<h2 class="font-sans-bold text-lg">{title}</h2>
@@ -30,8 +36,6 @@
 		box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.1);
 	}
 	img {
-		width: 160px;
-		height: 160px;
 		object-fit: cover;
 	}
 </style>

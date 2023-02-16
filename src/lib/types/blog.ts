@@ -32,4 +32,9 @@ export type Post = {
 			};
 		};
 	};
+	SEO: {
+		keywords: string;
+		metaDescription: string;
+		metaTitle: string;
+	};
 };

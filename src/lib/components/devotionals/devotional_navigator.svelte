@@ -8,8 +8,8 @@
 
 	let month: number = new Date().getMonth() + 1;
 	let year: number = new Date().getFullYear();
-	let search: string = '';
 	let devotionals: Devotional[] = [];
+	let loading: boolean = true;
 
 	const fetchDevotionals = async () => {
 		// replace with your mocked API request
@@ -17,12 +17,11 @@
 			const res = await fetch('/api/devotionals');
 			const data: { posts: CMSResponse<Devotional> } = await res.json();
 			devotionals = data.posts.data.map((item) => item.attributes);
-			console.log(devotionals);
-			// console.log(devotionals.map((devo) => devo.slug));
 		} catch (err) {
 			console.error(err);
+		} finally {
+			loading = false;
 		}
-		// devotionals = await res.json();
 	};
 
 	onMount(() => {
@@ -65,21 +64,27 @@
 	</div> -->
 </div>
 
-<ul class="flex w-full justify-center laptop:flex-wrap laptop:justify-between mt-4">
-	{#each devotionals as devotional}
-		<li class="flex">
-			<a href={`/devotionals/${devotional.slug}`}>
-				<DevotionalCard
-					title={devotional.title}
-					description={devotional.description}
-					releaseDate={devotional.releaseDate}
-				/>
-			</a>
-		</li>
-	{:else}
-		<li>No devotionals found</li>
-	{/each}
-</ul>
+{#if loading}
+	<div class="flex w-full justify-center mt-4">
+		<p>Loading...</p>
+	</div>
+{:else}
+	<ul class="flex w-full justify-center laptop:flex-wrap laptop:justify-between mt-4">
+		{#each devotionals as devotional}
+			<li class="flex">
+				<a href={`/devotionals/${devotional.slug}`} aria-label={`Read "${devotional.title}"`}>
+					<DevotionalCard
+						title={devotional.title}
+						description={devotional.description}
+						releaseDate={devotional.releaseDate}
+					/>
+				</a>
+			</li>
+		{:else}
+			<li>No devotionals found</li>
+		{/each}
+	</ul>
+{/if}
 
 <style>
 	select {

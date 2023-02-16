@@ -8,10 +8,12 @@
 <nav class="px-16 desktop:px-32 pb-16 pt-8 desktop:pt-16 justify-between hidden tablet:flex">
 	<h2 class="text-2xl text-blue_white font-sans-bold">Faith Forward</h2>
 	<div class="flex space-x-8 items-center">
-		<a href="/#features" class="text-grey font-sans-semi text-lg">About</a>
-		<a href="/devotionals" class="text-grey font-sans-semi text-lg">Devotionals</a>
-		<a href="/blog" class="text-grey font-sans-semi text-lg">Blog</a>
-		<button class="bg-red rounded-full py-1 px-8 text-white font-sans-semi text-lg">App</button>
+		<a href="/#features" class="text-grey font-sans-semi text-lg link">About</a>
+		<a href="/devotionals" class="text-grey font-sans-semi text-lg link">Devotionals</a>
+		<a href="/blog" class="text-grey font-sans-semi text-lg link">Blog</a>
+		<a href="https://apps.apple.com/us/app/faith-forward/id1661516199">
+			<button class="bg-red rounded-full py-1 px-8 text-white font-sans-semi text-lg">App</button>
+		</a>
 	</div>
 </nav>
 
@@ -44,7 +46,14 @@
 			<li><a href="/" class="text-white font-sans-semi">About</a></li>
 			<li><a href="/devotionals" class="text-white font-sans-semi">Devotionals</a></li>
 			<li><a href="/blog" class="text-white font-sans-semi">Blog</a></li>
-			<li><a href="/" class="text-white font-sans-semi">App</a></li>
+			<li>
+				<a
+					href="https://apps.apple.com/us/app/faith-forward/id1661516199"
+					class="text-white font-sans-semi"
+				>
+					App
+				</a>
+			</li>
 		</ul>
 	</div>
 </nav>
@@ -53,12 +62,12 @@
 	nav {
 		z-index: 1;
 	}
-	a {
+	a.link {
 		position: relative;
 		text-decoration: none;
 	}
 
-	a::before {
+	a.link::before {
 		content: '';
 		position: absolute;
 		width: 0%;
@@ -69,7 +78,7 @@
 		transition: width 0.2s ease-in-out;
 	}
 
-	a:hover::before {
+	a.link:hover::before {
 		width: 100%;
 	}
 </style>

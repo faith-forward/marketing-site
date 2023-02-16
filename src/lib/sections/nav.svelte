@@ -20,7 +20,9 @@
 			<a href="/blog" class={`text-grey font-sans-semi text-lg ${active === 'blog' && 'active'}`}
 				>Blog</a
 			>
-			<button class="bg-red rounded-full py-1 px-8 text-white font-sans-semi text-lg">App</button>
+			<a href="https://apps.apple.com/us/app/faith-forward/id1661516199">
+				<button class="bg-red rounded-full py-1 px-8 text-white font-sans-semi text-lg">App</button>
+			</a>
 		</div>
 		<button class="text-grey text-lg active:text-blue flex tablet:hidden" on:click={toggleDropdown}>
 			<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -40,7 +42,11 @@
 			</svg>
 		</button>
 	</div>
-	<div class={`tablet:hidden ${!showDropdown ? 'hidden' : 'flex'} flex-col items-end mt-2`}>
+	<div
+		class={`tablet:hidden ${!showDropdown ? 'hidden' : 'flex'} flex-col items-end mt-2`}
+		aria-label="Open Navigation Menu"
+		aria-haspopup="menu"
+	>
 		<ul class="space-y-2 text-right">
 			<li><a href="/" class="text-grey font-sans-semi">About</a></li>
 			<li><a href="/devotionals" class="text-grey font-sans-semi">Devotionals</a></li>

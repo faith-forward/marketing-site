@@ -1,5 +1,4 @@
 const formatDate = (dateString: string): string => {
-	console.log(dateString);
 	const date = new Date(dateString);
 	const options = {
 		month: 'short',
