@@ -47,6 +47,11 @@
 	$: post = data.post;
 </script>
 
+<svelte:head>
+	<title>{post.SEO.metaTitle}</title>
+	<meta name="description" content={post.SEO.metaDescription} />
+</svelte:head>
+
 <main class="bg-paper">
 	<div class="px-4 tablet:px-16 desktop:px-32">
 		<Nav active="blog" />

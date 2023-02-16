@@ -21,12 +21,20 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Blog | Christian Inspiration and More with Faith Forward</title>
+	<meta
+		name="description"
+		content="The Faith Forward Blog offers a collection of inspirational articles about the Christian faith designed to uplift and inspire you. Read our featured articles and discover new ways to deepen your faith. Explore our blog now and start your journey to a more fulfilling spiritual life."
+	/>
+</svelte:head>
+
 <main class="flex flex-col bg-paper px-4 tablet:px-16 desktop:px-32">
 	<Nav active="blog" />
-	<section class="flex laptop:space-x-8 mt-8 flex-col items-center pb-16">
+	<section class="flex desktop:space-x-8 mt-8 flex-col items-center pb-16">
 		<h1 class="mb-24 text-4xl text-boldGrey font-sans-bold">Featured Articles</h1>
-		<div class="flex flex-col laptop:flex-row">
-			<div class="flex laptop:mr-16 mb-8 laptop:mb-0">
+		<div class="flex flex-col big-laptop:flex-row">
+			<div class="flex big-laptop:mr-16 mb-8 big-laptop:mb-0">
 				{#if featuredPost}
 					<FeaturedPost
 						cover={featuredPost.cover.data.attributes.formats.large.url}

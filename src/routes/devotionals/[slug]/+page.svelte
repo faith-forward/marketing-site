@@ -1,23 +1,31 @@
 <script lang="ts">
 	import DevotionalReader from '$lib/components/devotionals/devotional_reader.svelte';
+	import RelatedDevotionals from '$lib/components/devotionals/related_devotionals.svelte';
 	import Nav from '$lib/sections/nav.svelte';
+	import type { CMSResponse } from '$lib/types/cmsResponse';
 	import type { Devotional } from '$lib/types/devotional';
-	import formatDate from '$lib/util/formatDate';
-	import getReadingTime from '$lib/util/getReadingTime';
 
-	export let data: { post: Devotional };
+	export let data: { post: Devotional; relatedPosts: CMSResponse<Devotional> };
 	let post: Devotional;
+	let relatedPosts: Devotional[];
 	let content: string;
 
 	$: post = data.post;
+	$: if (data.relatedPosts && data.relatedPosts.data)
+		relatedPosts = data.relatedPosts.data.map((post) => post.attributes);
 	$: content = post.content.replaceAll('\n', '<br />');
 </script>
+
+<svelte:head>
+	<title>{post.seoTitle}</title>
+	<meta name="description" content={post.seoDescription} />
+</svelte:head>
 
 <main class="bg-paper flex flex-col relative">
 	<div class="px-4 tablet:px-16 desktop:px-32">
 		<Nav active="devotionals" />
 	</div>
-	<section class="flex flex-1 flex h-full items-center flex-col">
+	<section class="flex flex items-center flex-col reader">
 		<DevotionalReader
 			title={post.title}
 			{content}
@@ -25,11 +33,17 @@
 			quote={post.quote}
 		/>
 	</section>
+	{#if relatedPosts && relatedPosts.length > 0}
+		<RelatedDevotionals {relatedPosts} />
+	{/if}
 </main>
 
 <style>
 	main {
 		width: 100vw;
 		min-height: 100vh;
+	}
+	.reader {
+		min-height: calc(100vh - 84px);
 	}
 </style>

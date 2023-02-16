@@ -31,7 +31,6 @@ export const GET: RequestHandler = async ({ url }) => {
 				}
 			}
 		});
-		console.log(`${apiBaseUrl}/api/devotionals?${query}`);
 
 		const res = await fetch(`${apiBaseUrl}/api/devotionals?${query}`);
 		const json = await res.json();
