@@ -58,27 +58,9 @@
 	</div>
 	<section class="flex flex-col relative">
 		{#if post.isPortrait}
-			<PortraitJumbo
-				title={post.title}
-				description={post.description}
-				image={post.cover.data.attributes.formats.large.url}
-				tags={post.tags.data.map((tag) => tag.attributes.tag).sort((a, b) => a.localeCompare(b))}
-				imageAlt={post.cover.data.attributes.formats.large.alternativeText}
-				releaseDate={formatDate(post.releaseDate)}
-				readingTime={getReadingTime(post.content)}
-				color={post.color}
-			/>
+			<PortraitJumbo {post} />
 		{:else}
-			<LandscapeJumbo
-				title={post.title}
-				description={post.description}
-				image={post.cover.data.attributes.formats.large.url}
-				tags={post.tags.data.map((tag) => tag.attributes.tag).sort((a, b) => a.localeCompare(b))}
-				imageAlt={post.cover.data.attributes.formats.large.alternativeText}
-				releaseDate={formatDate(post.releaseDate)}
-				readingTime={getReadingTime(post.content)}
-				color={post.color}
-			/>
+			<LandscapeJumbo {post} />
 		{/if}
 		<div class="flex justify-around pb-8 tablet:py-24">
 			<div

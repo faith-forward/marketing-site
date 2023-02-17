@@ -24,6 +24,7 @@ export type Post = {
 	cover: {
 		data: {
 			attributes: {
+				alternativeText: string;
 				formats: {
 					small: Image;
 					large: Image;

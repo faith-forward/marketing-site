@@ -1,16 +1,11 @@
 <script lang="ts">
+	import type { Post } from '$lib/types/blog';
+	import getReadingTime from '$lib/util/getReadingTime';
 	import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import Tag from './tag.svelte';
 
-	export let title: string;
-	export let description: string;
-	export let tags: string[];
-	export let image: string;
-	export let imageAlt: string;
-	export let releaseDate: string;
-	export let readingTime: string;
-	export let color: string;
+	export let post: Post;
 </script>
 
 <div class="flex justify-between mb-16 relative">
@@ -25,20 +20,32 @@
 		class="flex-1 py-12 flex flex-col justify-center tablet:px-16 laptop:pl-16 desktop:pl-32 items-center text-center laptop:text-left laptop:items-start"
 	>
 		<div class="flex flex-wrap space-x-4 mb-4">
-			{#each tags as tag}
-				<Tag {tag} color="boldGrey" />
+			{#each post.tags.data as tag}
+				<Tag tag={tag.attributes.tag} color="boldGrey" />
 			{/each}
 		</div>
-		<h1 class=" text-6xl font-sans-condensed text-boldGrey leading-tight">{title.toUpperCase()}</h1>
-		<p class="font-sans text-grey mt-8 w-3/5">{description}</p>
+		<h1 class=" text-6xl font-sans-condensed text-boldGrey leading-tight">
+			{post.title.toUpperCase()}
+		</h1>
+		<p class="font-sans text-grey mt-8 w-3/5">{post.description}</p>
 		<p class="font-sans text-sm text-grey mt-8 w-3/5">
-			<span class="italic mr-4">{releaseDate}</span>
-			{readingTime}
+			<span class="italic mr-4">{post.releaseDate}</span>
+			{getReadingTime(post.content)}
 		</p>
-		<img src={image} alt={imageAlt} class="flex laptop:hidden mt-8" />
+		<img
+			src={post.cover.data.attributes.formats.medium.url}
+			alt={post.cover.data.attributes.alternativeText}
+			class="flex laptop:hidden mt-8"
+		/>
 	</div>
-	<div class="flex-1 py-12 justify-center hidden laptop:flex" style={`background-color: ${color}`}>
-		<img src={image} alt={imageAlt} />
+	<div
+		class="flex-1 py-12 justify-center hidden laptop:flex"
+		style={`background-color: ${post.color}`}
+	>
+		<img
+			src={post.cover.data.attributes.formats.large.url}
+			alt={post.cover.data.attributes.alternativeText}
+		/>
 	</div>
 </div>
 

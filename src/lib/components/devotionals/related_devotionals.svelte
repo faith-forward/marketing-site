@@ -5,17 +5,19 @@
 	export let relatedPosts: Devotional[];
 </script>
 
-<section class="my-24 px-16 desktop:px-32 w-full flex-1">
+<section class="my-24 px-16 desktop:px-32 w-full flex-1 flex flex-col">
 	<h2 class="text-center font-sans-condensed text-4xl text-boldGrey flex-1">Related Devotionals</h2>
-	<div class="flex justify-between flex-wrap w-full my-24">
-		{#each relatedPosts as post}
-			<a href={`/devotionals/${post.slug}`} aria-label={`Read "${post.title}"`}>
-				<DevotionalCard
-					title={post.title}
-					description={post.description}
-					releaseDate={post.releaseDate}
-				/>
-			</a>
-		{/each}
+	<div class="flex my-8 justify-center">
+		<div class="flex flex-wrap justify-center">
+			{#each relatedPosts as post}
+				<a href={`/devotionals/${post.slug}`} aria-label={`Read "${post.title}"`} class="mx-8 my-4">
+					<DevotionalCard
+						title={post.title}
+						description={post.description}
+						releaseDate={post.releaseDate}
+					/>
+				</a>
+			{/each}
+		</div>
 	</div>
 </section>

@@ -36,24 +36,13 @@
 		<div class="flex flex-col big-laptop:flex-row">
 			<div class="flex big-laptop:mr-16 mb-8 big-laptop:mb-0">
 				{#if featuredPost}
-					<FeaturedPost
-						cover={featuredPost.cover.data.attributes.formats.large.url}
-						title={featuredPost.title}
-						description={featuredPost.description}
-						slug={featuredPost.slug}
-					/>
+					<FeaturedPost post={featuredPost} />
 				{/if}
 			</div>
 			{#if posts.data.length > 0}
 				<ul class="flex flex-col flex-1 space-y-8 mb-8 laptop:mb-0">
 					{#each posts.data as post}
-						<BlogListing
-							cover={post.attributes.cover.data.attributes.formats.small.url}
-							title={post.attributes.title}
-							description={post.attributes.description}
-							releaseDate={post.attributes.releaseDate}
-							slug={post.attributes.slug}
-						/>
+						<BlogListing post={post.attributes} />
 					{/each}
 				</ul>
 			{:else}

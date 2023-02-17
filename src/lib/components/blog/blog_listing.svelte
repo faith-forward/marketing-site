@@ -1,30 +1,27 @@
 <script lang="ts">
+	import type { Post } from '$lib/types/blog';
 	import formatDate from '$lib/util/formatDate';
 
-	export let cover: string;
-	export let title: string;
-	export let description: string;
-	export let releaseDate: string;
-	export let slug: string;
+	export let post: Post;
 </script>
 
 <li class="">
-	<a href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
+	<a href={`/blog/${post.slug}`} aria-label={`Read "${post.title}"`}>
 		<div
 			class="flex flex-row rounded-lg card bg-white h-[220px] tablet:h-[200px] desktop:h-[180px] overflow-scroll"
 		>
 			<img
-				src={cover}
-				alt={title}
+				src={post.cover.data.attributes.formats.small.url}
+				alt={post.cover.data.attributes.alternativeText}
 				class="rounded-l-lg hidden tablet:flex desktop:w-[180px] desktop:h-[180px] big-laptop:w-[200px] big-laptop:w-[160px]"
 			/>
 			<div class="py-4 px-8 flex flex-col justify-between">
 				<div>
-					<h2 class="font-sans-bold text-lg">{title}</h2>
-					<p class="font-sans text-sm mt-1 text-grey">{description}</p>
+					<h2 class="font-sans-bold text-lg">{post.title}</h2>
+					<p class="font-sans text-sm mt-1 text-grey">{post.description}</p>
 				</div>
 				<p class="justify-self-end text-grey italic font-sans text-sm">
-					{formatDate(releaseDate)}
+					{formatDate(post.releaseDate)}
 				</p>
 			</div>
 		</div>
