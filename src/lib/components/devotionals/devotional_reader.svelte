@@ -16,12 +16,14 @@
 		const renderer = new marked.Renderer();
 		renderer.br = () => '<br />';
 		// renderer.br
-		return marked(content, { renderer });
+		contentDiv.innerHTML = marked(content, { renderer });
 	};
 
 	onMount(() => {
-		contentDiv.innerHTML = renderContent();
+		renderContent();
 	});
+
+	$: if (content && contentDiv) renderContent();
 </script>
 
 <div class="flex flex-1 relative pb-8">

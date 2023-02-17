@@ -8,12 +8,10 @@
 	export let data: { post: Devotional; relatedPosts: CMSResponse<Devotional> };
 	let post: Devotional;
 	let relatedPosts: Devotional[];
-	let content: string;
 
 	$: post = data.post;
 	$: if (data.relatedPosts && data.relatedPosts.data)
 		relatedPosts = data.relatedPosts.data.map((post) => post.attributes);
-	$: content = post.content.replaceAll('\n', '<br />');
 </script>
 
 <svelte:head>
@@ -28,7 +26,7 @@
 	<section class="flex flex items-center flex-col reader">
 		<DevotionalReader
 			title={post.title}
-			{content}
+			content={post.content.replace(/\n/g, '<br />')}
 			releaseDate={post.releaseDate}
 			quote={post.quote}
 		/>
