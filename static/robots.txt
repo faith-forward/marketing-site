@@ -1,1 +1,1 @@
-Sitemap: https://your-strapi-domain.com/sitemap/index.xml
+Sitemap: https://www.faithforward.app/sitemap.xml
