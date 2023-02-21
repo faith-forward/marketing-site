@@ -21,7 +21,9 @@
 				>Blog</a
 			>
 			<a href="https://apps.apple.com/us/app/faith-forward/id1661516199">
-				<button class="bg-red rounded-full py-1 px-8 text-white font-sans-semi text-lg">App</button>
+				<button class="bg-red rounded-full py-1 px-4 text-white font-sans-semi text-lg"
+					>Download</button
+				>
 			</a>
 		</div>
 		<button class="text-grey text-lg active:text-blue flex tablet:hidden" on:click={toggleDropdown}>
@@ -51,7 +53,7 @@
 			<li><a href="/" class="text-grey font-sans-semi">About</a></li>
 			<li><a href="/devotionals" class="text-grey font-sans-semi">Devotionals</a></li>
 			<li><a href="/blog" class="text-grey font-sans-semi">Blog</a></li>
-			<li><a href="/" class="text-red font-sans-semi">App</a></li>
+			<li><a href="/" class="text-red font-sans-semi">Download</a></li>
 		</ul>
 	</div>
 </nav>

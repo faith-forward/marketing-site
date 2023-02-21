@@ -12,7 +12,9 @@
 		<a href="/devotionals" class="text-grey font-sans-semi text-lg link">Devotionals</a>
 		<a href="/blog" class="text-grey font-sans-semi text-lg link">Blog</a>
 		<a href="https://apps.apple.com/us/app/faith-forward/id1661516199">
-			<button class="bg-red rounded-full py-1 px-8 text-white font-sans-semi text-lg">App</button>
+			<button class="bg-red rounded-full py-1 px-4 text-white font-sans-semi text-lg"
+				>Download</button
+			>
 		</a>
 	</div>
 </nav>
@@ -51,7 +53,7 @@
 					href="https://apps.apple.com/us/app/faith-forward/id1661516199"
 					class="text-white font-sans-semi"
 				>
-					App
+					Download
 				</a>
 			</li>
 		</ul>

@@ -16,19 +16,23 @@
 		},
 		{
 			src: '/images/screenshots/Find Your Way.webp',
-			alt: 'An iphone that is typing into the input field of the Faith Forward App'
+			alt: '"Find Your Way - Inspiring devotionals, prayers, & Bible verses". Below is a screenshot of a personalized devotional.'
 		},
 		{
 			src: '/images/screenshots/Dive Deeper.webp',
-			alt: 'An iphone that is typing into the input field of the Faith Forward App'
+			alt: '"Dive Deeper - Engage with your favorite verses". Below is a screenshot of a user diving deeper into a verse through the verse action modal.'
 		},
 		{
 			src: '/images/screenshots/Explore the Bible.webp',
-			alt: 'An iphone that is typing into the input field of the Faith Forward App'
+			alt: '"Explore the Bible - See verses in context.". Below is a screenshot of the Faith Forward Bible reader'
 		},
 		{
 			src: '/images/screenshots/Study Scripture.webp',
-			alt: 'An iphone that is typing into the input field of the Faith Forward App'
+			alt: '"Study Scripture - Find more meaning in every verse.". Below is a screenshot of a verse analysis tailored to a user.'
+		},
+		{
+			src: '/images/screenshots/Uplifting Sermons.webp',
+			alt: '"Uplifting Sermons - Daily inspiration just a tap away.". Below is a screenshot of the sermon screen of the Faith Forward app.'
 		}
 	];
 </script>

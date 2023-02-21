@@ -34,9 +34,9 @@
 				class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-blue_white font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 			>
 				<span class="bg-blue">
-					Connect with your faith on a deeper level with Faith Forward. Personalized inspiration,
-					full Bible passages, and in-depth verse analysis to help you on your journey of spiritual
-					growth.
+					A more personal connection with your faith is just a tap away. Personalized devotions,
+					full Bible passages, in-depth verse analysis, and daily sermons to help you on your
+					journey of spiritual growth.
 				</span>
 			</p>
 		</div>
