@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BlogArchive from '$lib/components/blog/blog_archive.svelte';
 	import BlogListing from '$lib/components/blog/blog_listing.svelte';
 	import FeaturedPost from '$lib/components/blog/featured_post.svelte';
 
@@ -42,7 +43,9 @@
 			{#if posts.data.length > 0}
 				<ul class="flex flex-col flex-1 space-y-8 mb-8 laptop:mb-0">
 					{#each posts.data as post}
-						<BlogListing post={post.attributes} />
+						<li>
+							<BlogListing post={post.attributes} />
+						</li>
 					{/each}
 				</ul>
 			{:else}
@@ -50,6 +53,7 @@
 			{/if}
 		</div>
 	</section>
+	<BlogArchive />
 </main>
 
 <style>
