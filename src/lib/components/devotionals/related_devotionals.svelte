@@ -5,7 +5,7 @@
 	export let relatedPosts: Devotional[];
 </script>
 
-<section class="my-24 px-16 desktop:px-32 w-full flex-1 flex flex-col">
+<section class="mt-24 mb-8 px-16 desktop:px-32 w-full flex-1 flex flex-col">
 	<h2 class="text-center font-sans-condensed text-4xl text-boldGrey flex-1">Related Devotionals</h2>
 	<div class="flex my-8 justify-center">
 		<div class="flex flex-wrap justify-center">

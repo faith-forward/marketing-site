@@ -1,5 +1,6 @@
 <script lang="ts">
 	import DevotionalNavigator from '$lib/components/devotionals/devotional_navigator.svelte';
+	// import MailingList from '$lib/components/mailing_list.svelte';
 	import Nav from '$lib/sections/nav.svelte';
 </script>
 
@@ -11,12 +12,20 @@
 	/>
 </svelte:head>
 
-<main class="flex flex-col bg-paper px-4 tablet:px-16 desktop:px-32 pb-16">
-	<Nav active="devotionals" />
-	<section class="flex laptop:space-x-8 mt-8 flex-col items-center">
-		<h1 class="mb-24 text-4xl text-boldGrey font-sans-bold">Daily Devotionals</h1>
+<main class="flex flex-col bg-paper">
+	<div class="px-4 tablet:px-16 desktop:px-32">
+		<Nav active="devotionals" />
+	</div>
+	<section class="flex laptop:space-x-8 mt-8 flex-col items-center px-4 tablet:px-16 desktop:px-32">
+		<h1 class="mb-4 text-4xl text-boldGrey font-sans-bold">Daily Devotionals</h1>
+		<p class="mb-24 text-lg text-grey font-sans-semi big-laptop:w-3/5 laptop:w-4/5 text-center">
+			Your go-to source for daily inspiration, reflection, and guidance – our collection of
+			devotionals is designed to help you connect with your faith, no matter where you are on your
+			spiritual journey.
+		</p>
 		<DevotionalNavigator />
 	</section>
+	<!-- <MailingList /> -->
 </main>
 
 <style>

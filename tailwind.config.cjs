@@ -10,8 +10,10 @@ module.exports = {
 				blue_white: '#E3F9FF',
 				grey: '#818485',
 				paper: '#F5F5F5',
+				darkPaper: '#eaeaea',
 				boldGrey: '#323438',
-				white: '#FFFFFF'
+				white: '#FFFFFF',
+				purple: '#117ed6'
 			},
 			height: {
 				'100v': '100vh'
