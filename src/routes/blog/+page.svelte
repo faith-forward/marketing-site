@@ -10,16 +10,19 @@
 
 	export let data: PageData;
 	let posts: CMSResponse<Post>;
+	let pinnedPosts: CMSResponse<Post>;
 	let featuredPost: Post | undefined;
 
-	$: {
-		posts = { ...data.posts };
-		const featuredPostFound = posts.data.findIndex((post) => post.attributes.featured);
-		if (featuredPostFound && posts.data[featuredPostFound]) {
-			featuredPost = posts.data[featuredPostFound].attributes;
-			posts.data.splice(featuredPostFound, 1);
-		}
-	}
+	$: if (data && data.posts)
+		featuredPost = data.posts.data.find((post: any) => post.attributes.featured).attributes;
+
+	$: if (data && data.posts)
+		pinnedPosts = {
+			data: data.posts.data.filter(
+				(post: any) => post.attributes.pinned && !post.attributes.featured
+			),
+			meta: data.posts.meta
+		};
 </script>
 
 <svelte:head>
@@ -40,16 +43,14 @@
 					<FeaturedPost post={featuredPost} />
 				{/if}
 			</div>
-			{#if posts.data.length > 0}
+			{#if pinnedPosts.data.length > 0}
 				<ul class="flex flex-col flex-1 space-y-8 mb-8 laptop:mb-0">
-					{#each posts.data as post}
+					{#each pinnedPosts.data as post}
 						<li>
 							<BlogListing post={post.attributes} />
 						</li>
 					{/each}
 				</ul>
-			{:else}
-				<p>No posts found.</p>
 			{/if}
 		</div>
 	</section>

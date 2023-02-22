@@ -10,6 +10,7 @@
 		name="description"
 		content="Receive personalized Christian devotionals based on whatever is on your mind with Faith Forward. Our app offers a unique and tailored approach to devotionals that is designed to inspire and uplift you. Download now and start your journey to a deeper faith."
 	/>
+	<meta name="facebook-domain-verification" content="yvqkose9v1ptpfvewj2ug97s9nzeya" />
 </svelte:head>
 
 <main class="flex flex-col bg-paper">
