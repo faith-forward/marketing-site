@@ -1,11 +1,12 @@
 // import fetch from 'node-fetch';
 import { apiBaseUrl } from '$lib/config/api_config';
-import logView from '$lib/pixel/logView';
+import { logPageView } from '$lib/pixel/log';
 import qs from 'qs';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ fetch, getClientAddress }) => {
+export const load: PageServerLoad = async ({ fetch, getClientAddress, request }) => {
 	try {
+		const client_user_agent = request.headers.get('User-Agent') || '';
 		const ip = getClientAddress();
 		const query = qs.stringify({
 			sort: ['releaseDate:desc'],
@@ -19,8 +20,9 @@ export const load: PageServerLoad = async ({ fetch, getClientAddress }) => {
 		});
 		const res = await fetch(`${apiBaseUrl}/api/articles?${query}`);
 		const json = await res.json();
-		logView('Blog Archive', 'page', '/blog', {
-			client_ip_address: ip.toString()
+		logPageView('Blog', '/blog', {
+			client_ip_address: ip.toString(),
+			client_user_agent
 		});
 		return {
 			posts: json

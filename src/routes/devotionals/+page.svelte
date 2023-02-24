@@ -1,6 +1,6 @@
 <script lang="ts">
 	import DevotionalNavigator from '$lib/components/devotionals/devotional_navigator.svelte';
-	// import MailingList from '$lib/components/mailing_list.svelte';
+	import MailingList from '$lib/components/mailing_list.svelte';
 	import Nav from '$lib/sections/nav.svelte';
 </script>
 

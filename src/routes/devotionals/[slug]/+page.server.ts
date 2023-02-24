@@ -1,10 +1,10 @@
 // import fetch from 'node-fetch';
 import { apiBaseUrl } from '$lib/config/api_config';
+import { logView } from '$lib/pixel/log';
 import type { CMSResponse } from '$lib/types/cmsResponse';
 import type { Devotional } from '$lib/types/devotional';
 import qs from 'qs';
-import type { PageLoad } from './$types';
-import type { Tag } from '$lib/types/tag';
+import type { PageServerLoad } from './$types';
 
 // fetch related posts
 const getRelatedPosts = async (tags: string[], slug: string) => {
@@ -36,8 +36,10 @@ const getRelatedPosts = async (tags: string[], slug: string) => {
 };
 
 // Fetch post on load
-export const load: PageLoad = async ({ fetch, params }) => {
+export const load: PageServerLoad = async ({ fetch, params, getClientAddress, request }) => {
 	const { slug } = params;
+	const client_user_agent = request.headers.get('User-Agent') || '';
+	const client_ip_address = getClientAddress().toString();
 	const query = qs.stringify({
 		filters: {
 			slug: {
@@ -59,7 +61,10 @@ export const load: PageLoad = async ({ fetch, params }) => {
 		if (tags) {
 			relatedPosts = await getRelatedPosts(tags, slug);
 		}
-
+		logView(json.data[0].attributes.title, 'devotional', `/devotionals/${slug}`, {
+			client_ip_address,
+			client_user_agent
+		});
 		return {
 			post: json.data[0].attributes,
 			relatedPosts

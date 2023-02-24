@@ -1,7 +1,7 @@
 <script lang="ts">
 	import DevotionalReader from '$lib/components/devotionals/devotional_reader.svelte';
 	import RelatedDevotionals from '$lib/components/devotionals/related_devotionals.svelte';
-	// import MailingList from '$lib/components/mailing_list.svelte';
+	import MailingList from '$lib/components/mailing_list.svelte';
 	import Nav from '$lib/sections/nav.svelte';
 	import type { CMSResponse } from '$lib/types/cmsResponse';
 	import type { Devotional } from '$lib/types/devotional';
