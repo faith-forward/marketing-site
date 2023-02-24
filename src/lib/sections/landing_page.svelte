@@ -1,4 +1,5 @@
 <script lang="ts">
+	import initiateDownload from '$lib/pixel/initiateDownload';
 	import { lazyLoad } from '$lib/util/lazyLoad';
 	import Nav from './homepage_nav.svelte';
 </script>
@@ -47,6 +48,7 @@
 		/>
 		<a
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
+			on:click={() => initiateDownload('/')}
 			class="self-center laptop:hidden"
 			aria-label="Download the app"
 		>
@@ -56,6 +58,7 @@
 		</a>
 		<a
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
+			on:click={() => initiateDownload('/')}
 			class="w-48 mb-24"
 			aria-label="Download the app"
 		>

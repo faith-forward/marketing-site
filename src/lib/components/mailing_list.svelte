@@ -1,3 +1,21 @@
+<script lang="ts">
+	let email: string;
+	const subscribe = async () => {
+		const res = await fetch('/api/newsletter/subscribe', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ email })
+		});
+		const data = await res.json();
+		console.log(data);
+		if (res.status === 200) {
+			alert('Success! Check your email for a confirmation link.');
+		}
+	};
+</script>
+
 <div
 	class="bg-[#8fc9bd] w-full py-32 mt-24 flex flex-col items-center justify-center mailing-container"
 >
@@ -15,9 +33,10 @@
 				<input
 					type="text"
 					placeholder="Enter your email"
+					bind:value={email}
 					class="bg-darkPaper px-2 py-1 font-sans text-boldGrey w-[400px]"
 				/>
-				<button class="bg-red text-white px-4 py-2 ml-4">Subscribe </button>
+				<button class="bg-red text-white px-4 py-2 ml-4" on:click={subscribe}>Subscribe</button>
 			</div>
 		</div>
 		<div class="overflow-clip items-center hidden laptop:flex">

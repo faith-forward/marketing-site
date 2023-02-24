@@ -1,4 +1,6 @@
 <script lang="ts">
+	import initiateDownload from '$lib/pixel/initiateDownload';
+
 	let showDropdown = false;
 	const toggleDropdown = () => {
 		showDropdown = !showDropdown;
@@ -11,7 +13,10 @@
 		<a href="/#features" class="text-grey font-sans-semi text-lg link">About</a>
 		<a href="/devotionals" class="text-grey font-sans-semi text-lg link">Devotionals</a>
 		<a href="/blog" class="text-grey font-sans-semi text-lg link">Blog</a>
-		<a href="https://apps.apple.com/us/app/faith-forward/id1661516199">
+		<a
+			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
+			on:click={() => initiateDownload('/')}
+		>
 			<button class="bg-red rounded-full py-1 px-4 text-white font-sans-semi text-lg"
 				>Download</button
 			>
@@ -51,6 +56,7 @@
 			<li>
 				<a
 					href="https://apps.apple.com/us/app/faith-forward/id1661516199"
+					on:click={() => initiateDownload('/')}
 					class="text-white font-sans-semi"
 				>
 					Download
