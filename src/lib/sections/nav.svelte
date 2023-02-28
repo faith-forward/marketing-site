@@ -1,7 +1,7 @@
 <script lang="ts">
 	import initiateDownload from '$lib/pixel/initiateDownload';
 
-	export let active: 'devotionals' | 'blog' | 'about' | null = null;
+	export let active: 'devotionals' | 'blog' | 'about' | 'sermons' | null = null;
 
 	let showDropdown = false;
 	const toggleDropdown = () => {
@@ -18,6 +18,10 @@
 				href="/devotionals"
 				class={`text-grey font-sans-semi text-lg ${active === 'devotionals' && 'active'}`}
 				>Devotionals</a
+			>
+			<a
+				href="/sermons"
+				class={`text-grey font-sans-semi text-lg ${active === 'sermons' && 'active'}`}>Sermons</a
 			>
 			<a href="/blog" class={`text-grey font-sans-semi text-lg ${active === 'blog' && 'active'}`}
 				>Blog</a
@@ -57,6 +61,7 @@
 		<ul class="space-y-2 text-right">
 			<li><a href="/" class="text-grey font-sans-semi">About</a></li>
 			<li><a href="/devotionals" class="text-grey font-sans-semi">Devotionals</a></li>
+			<li><a href="/sermons" class="text-gray font-sams-semi">Sermons</a></li>
 			<li><a href="/blog" class="text-grey font-sans-semi">Blog</a></li>
 			<li>
 				<a

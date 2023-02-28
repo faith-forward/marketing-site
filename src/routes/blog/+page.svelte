@@ -9,7 +9,6 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	let posts: CMSResponse<Post>;
 	let pinnedPosts: CMSResponse<Post>;
 	let featuredPost: Post | undefined;
 

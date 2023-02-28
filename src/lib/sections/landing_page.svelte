@@ -74,8 +74,8 @@
 <style>
 	#blob1 {
 		width: 50%;
-		max-width: 1000px;
-		min-width: 700px;
+		max-width: 1100px;
+		min-width: 750px;
 		/* place the blob in the top right corner and 
     translate so that the blob is centered on the right corner of the screen */
 		position: absolute;
