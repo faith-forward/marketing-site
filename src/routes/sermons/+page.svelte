@@ -2,23 +2,37 @@
 	import SermonNavigator from '$lib/components/sermons/sermon_navigator.svelte';
 	import Nav from '$lib/sections/nav.svelte';
 	import type Sermon from '$lib/types/sermon';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	let sermons: Sermon[];
+	let sermonID: string;
+	let page = 0;
+	let sermonsPerPage = 5;
+
+	// extract page data
+	$: if (data && data.sermonID) {
+		sermonID = data.sermonID;
+	}
+
+	let sermons: Sermon[] = [];
 	let playingSermon: Sermon;
 
-	$: if (data && data.sermons) {
-		sermons = data.sermons;
-		const currentSermon = sermons.findIndex((sermon) => sermon.isPlaying);
-		if (currentSermon !== -1) {
-			sermons[currentSermon].isPlaying = true;
-			playingSermon = sermons[currentSermon];
-		} else {
-			sermons[0].isPlaying = true;
-			playingSermon = sermons[0];
-		}
-	}
+	const fetchSermons = async () => {
+		// check if there is a sermonID and append it to the url
+		const url = sermonID
+			? `/api/sermons?page=${page}&sermonID=${sermonID}`
+			: `/api/sermons?page=${page}`;
+		const res = await fetch(url);
+		const sermonData = await res.json();
+		sermons = sermonData.sermons;
+		playingSermon = sermonData.sermons[0];
+		playingSermon.isPlaying = true;
+	};
+
+	onMount(() => {
+		fetchSermons();
+	});
 </script>
 
 <svelte:head>

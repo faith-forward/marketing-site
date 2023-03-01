@@ -25,12 +25,14 @@
 			{/each}
 		</ul>
 	</div>
-	<!-- Sermon player -->
-	<div
-		class="flex w-[45vw] ml-8 sticky top-0 bottom-0 h-[100vh] bg-darkPaper mb-8 flex-col items-center justify-center p-8 text-center"
-	>
-		<h3 class="font-serif-bold text-3xl mb-4">{currentSermon.title}</h3>
-		<p class="font-sans-semi text-grey">{currentSermon.description}</p>
-		<SermonPlayer sermon={currentSermon} />
-	</div>
+	{#if currentSermon}
+		<!-- Sermon player -->
+		<div
+			class="flex w-[45vw] ml-8 sticky top-0 bottom-0 h-[100vh] bg-darkPaper mb-8 flex-col items-center justify-center p-8 text-center"
+		>
+			<h3 class="font-serif-bold text-3xl mb-4">{currentSermon.title}</h3>
+			<p class="font-sans-semi text-grey">{currentSermon.description}</p>
+			<SermonPlayer sermon={currentSermon} />
+		</div>
+	{/if}
 </div>

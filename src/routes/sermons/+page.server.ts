@@ -9,19 +9,12 @@ export const load: PageServerLoad = async ({ fetch, url, getClientAddress, reque
 	const client_user_agent = request.headers.get('User-Agent') || '';
 	const client_ip_address = getClientAddress().toString();
 	try {
-		const res = await fetch(`${firebaseUrl}/getSermons?page=0`);
-		const json = await res.json();
 		logPageView('Sermons', '/sermons', {
 			client_ip_address,
 			client_user_agent
 		});
-		for (let sermon of json) {
-			if (sermon.id && sermon.id === sermonID) {
-				sermon.isPlaying = true;
-			}
-		}
 		return {
-			sermons: json
+			sermonID
 		};
 	} catch (err) {
 		console.log(err);
