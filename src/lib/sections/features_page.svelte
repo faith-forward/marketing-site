@@ -7,20 +7,28 @@
 	};
 	const screenshots: Screenshot[] = [
 		{
-			src: '/images/screenshots/Faith Forward Demo.webp',
-			alt: 'An iphone that is typing into the input field of the Faith Forward App'
+			src: '/images/screenshots/InputLeft.webp',
+			alt: `A blob that says "Personalized Devotionals - Tell us what's on your mind. Devotionals made just for you.`
 		},
 		{
-			src: '/images/screenshots/Personalized Devotionals.webp',
-			alt: `A blob that says "Personalized Devotionals - Tell us what's on your mind. Devotionals made just for you.`
+			src: '/images/screenshots/InputRight.webp',
+			alt: 'An iphone that is typing into the input field of the Faith Forward App'
 		},
 		{
 			src: '/images/screenshots/Find Your Way.webp',
 			alt: '"Find Your Way - Inspiring devotionals, prayers, & Bible verses". Below is a screenshot of a personalized devotional.'
 		},
 		{
-			src: '/images/screenshots/Dive Deeper.webp',
-			alt: '"Dive Deeper - Engage with your favorite verses". Below is a screenshot of a user diving deeper into a verse through the verse action modal.'
+			src: '/images/screenshots/DailyDevo.webp',
+			alt: '"Always Inspired - Devotionals written daily". Below is a screenshot of a Faith Forward daily devotional.'
+		},
+		{
+			src: '/images/screenshots/Sermons.webp',
+			alt: '"Uplifting Sermons - Daily inspiration just a tap away.". Below is a screenshot of the sermon screen of the Faith Forward app.'
+		},
+		{
+			src: '/images/screenshots/Favs.webp',
+			alt: '"Save Favorites - Keep what speaks to you all in one place.". Below is a screenshot of a user\'s favorited sermons.'
 		},
 		{
 			src: '/images/screenshots/Explore the Bible.webp',
@@ -29,10 +37,6 @@
 		{
 			src: '/images/screenshots/Study Scripture.webp',
 			alt: '"Study Scripture - Find more meaning in every verse.". Below is a screenshot of a verse analysis tailored to a user.'
-		},
-		{
-			src: '/images/screenshots/Uplifting Sermons.webp',
-			alt: '"Uplifting Sermons - Daily inspiration just a tap away.". Below is a screenshot of the sermon screen of the Faith Forward app.'
 		}
 	];
 </script>
