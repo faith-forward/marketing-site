@@ -14,7 +14,7 @@
 	const fetchDevotionals = async () => {
 		// replace with your mocked API request
 		try {
-			const res = await fetch('/api/devotionals');
+			const res = await fetch(`/api/devotionals?month=${month - 1}&year=${year}`);
 			const data: { posts: CMSResponse<Devotional> } = await res.json();
 			devotionals = data.posts.data.map((item) => item.attributes);
 		} catch (err) {
@@ -27,6 +27,11 @@
 	onMount(() => {
 		fetchDevotionals();
 	});
+
+	const updateMonth = () => {
+		loading = true;
+		fetchDevotionals();
+	};
 </script>
 
 <div class="flex w-full items-center justify-center laptop:justify-end">
@@ -35,6 +40,7 @@
 			class="font-sans-semi text-boldGrey py-2 px-4 border-width-2 border-2 border-boldGrey mr-4"
 			aria-label="Month"
 			bind:value={month}
+			on:change={updateMonth}
 		>
 			{#each Array.from({ length: 12 }, (_, i) => i + 1) as m}
 				<option value={m}

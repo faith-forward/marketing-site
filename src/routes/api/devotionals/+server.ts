@@ -27,7 +27,7 @@ export const GET: RequestHandler = async ({ url }) => {
 				// Only fetch devotionals that have been released in the current month
 				releaseDate: {
 					$gte: formatDate(month + 1, year),
-					$lte: getSoonerDate(formatDate(month + 2, year))
+					$lt: getSoonerDate(formatDate(month + 2, year))
 				}
 			}
 		});
