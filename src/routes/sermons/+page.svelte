@@ -1,14 +1,15 @@
 <script lang="ts">
+	import LoadingScreen from '$lib/components/sermons/loading_screen.svelte';
 	import SermonNavigator from '$lib/components/sermons/sermon_navigator.svelte';
 	import Nav from '$lib/sections/nav.svelte';
 	import type Sermon from '$lib/types/sermon';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 	let sermonID: string;
 	let page = 0;
-	let sermonsPerPage = 5;
+	let loading = true;
 
 	// extract page data
 	$: if (data && data.sermonID) {
@@ -17,6 +18,7 @@
 
 	let sermons: Sermon[] = [];
 	let playingSermon: Sermon;
+	let listRef: HTMLDivElement;
 
 	const fetchSermons = async () => {
 		// check if there is a sermonID and append it to the url
@@ -28,10 +30,30 @@
 		sermons = sermonData.sermons;
 		playingSermon = sermonData.sermons[0];
 		playingSermon.isPlaying = true;
+		loading = false;
+		console.log('finished loading');
+	};
+
+	const handleScroll = () => {
+		console.log('scrolling');
+		const scrollHeight = listRef.scrollHeight;
+		const scrollTop = listRef.scrollTop;
+		const clientHeight = listRef.clientHeight;
+		console.log(clientHeight);
+		if (scrollHeight - scrollTop === clientHeight) {
+			// fetchSermons();
+			console.log('next');
+		}
 	};
 
 	onMount(() => {
+		loading = true;
 		fetchSermons();
+		listRef.addEventListener('scroll', handleScroll);
+	});
+
+	onDestroy(() => {
+		if (listRef) listRef.removeEventListener('scroll', handleScroll);
 	});
 </script>
 
@@ -55,6 +77,13 @@
 				faith and inspiration in just a few short minutes.
 			</p>
 		</div>
-		<SermonNavigator {sermons} currentSermon={playingSermon} />
+		<div bind:this={listRef}>
+			<!-- display loading spinner or navigator -->
+			{#if loading}
+				<LoadingScreen />
+			{:else}
+				<SermonNavigator {sermons} currentSermon={playingSermon} />
+			{/if}
+		</div>
 	</section>
 </main>
