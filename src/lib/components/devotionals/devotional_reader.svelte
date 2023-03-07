@@ -37,13 +37,13 @@
 	<div
 		class="flex flex-1 mx-4 tablet:mx-16 desktop:mx-32 content flex-col font-sans justify-center mt-16 tablet:mt-8"
 	>
-		<div class="flex flex-col tablet:flex-row space-between tablet:items-end items-center">
+		<div class="flex flex-col tablet:flex-row space-between tablet:items-baseline items-center">
 			<h1
 				class="text-center tablet:text-left font-sans-condensed text-4xl text-boldGrey flex-1 leading-snug"
 			>
 				{title}
 			</h1>
-			<p class="text-sm text-grey italic self-end">{formatDate(releaseDate)}</p>
+			<p class="text-sm text-grey italic">{formatDate(releaseDate)}</p>
 		</div>
 		<div class="flex flex-1 items-center tablet:hidden my-4 p-4">
 			<p class="font-serif-bold text-2xl quote text-boldGrey leading-relaxed">
