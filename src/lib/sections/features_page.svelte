@@ -15,7 +15,7 @@
 			alt: 'An iphone that is typing into the input field of the Faith Forward App'
 		},
 		{
-			src: '/images/screenshots/Find Your Way.webp',
+			src: '/images/screenshots/PersonalizedDevo.webp',
 			alt: '"Find Your Way - Inspiring devotionals, prayers, & Bible verses". Below is a screenshot of a personalized devotional.'
 		},
 		{
@@ -31,12 +31,16 @@
 			alt: '"Save Favorites - Keep what speaks to you all in one place.". Below is a screenshot of a user\'s favorited sermons.'
 		},
 		{
-			src: '/images/screenshots/Explore the Bible.webp',
-			alt: '"Explore the Bible - See verses in context.". Below is a screenshot of the Faith Forward Bible reader'
+			src: '/images/screenshots/Bible.webp',
+			alt: '"Read the Bible - See verses in context.". Below is a screenshot of the Faith Forward Bible reader'
 		},
 		{
 			src: '/images/screenshots/Study Scripture.webp',
 			alt: '"Study Scripture - Find more meaning in every verse.". Below is a screenshot of a verse analysis tailored to a user.'
+		},
+		{
+			src: '/images/screenshots/Deeper.webp',
+			alt: '"Bible Study - Easy access to meaningful answers.". Below is a screenshot of the Faith Forward Exegesis generator.'
 		}
 	];
 </script>

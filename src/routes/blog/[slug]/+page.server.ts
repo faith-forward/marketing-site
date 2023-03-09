@@ -14,8 +14,19 @@ export const load: PageServerLoad = async ({ fetch, params, getClientAddress, re
 				$eq: slug
 			}
 		},
-		populate: '*'
+		populate: {
+			cover: '*',
+			tags: '*',
+			SEO: {
+				populate: {
+					SharedImage: {
+						populate: '*'
+					}
+				}
+			}
+		}
 	});
+	console.log(`${apiBaseUrl}/api/articles?${query}`);
 	try {
 		const res = await fetch(`${apiBaseUrl}/api/articles?${query}`);
 		const json = await res.json();

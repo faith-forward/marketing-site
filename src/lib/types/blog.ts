@@ -1,5 +1,7 @@
-type Image = {
+export type Image = {
 	url: string;
+	width?: number;
+	height?: number;
 	alternativeText: string;
 };
 
@@ -37,5 +39,18 @@ export type Post = {
 		keywords: string;
 		metaDescription: string;
 		metaTitle: string;
+		SharedImage: {
+			id: number;
+			alt: string;
+			media: {
+				data: {
+					attributes: {
+						formats: {
+							large: Image;
+						};
+					};
+				};
+			};
+		};
 	};
 };

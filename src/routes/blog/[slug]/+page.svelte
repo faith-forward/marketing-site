@@ -2,9 +2,7 @@
 	import LandscapeJumbo from '$lib/components/blog/landscape_jumbo.svelte';
 	import PortraitJumbo from '$lib/components/blog/portrait_jumbo.svelte';
 	import Nav from '$lib/sections/nav.svelte';
-	import type { Post } from '$lib/types/blog';
-	import formatDate from '$lib/util/formatDate';
-	import getReadingTime from '$lib/util/getReadingTime';
+	import type { Image, Post } from '$lib/types/blog';
 	import { marked } from 'marked';
 	import { onMount } from 'svelte';
 
@@ -44,12 +42,19 @@
 		contentDiv.innerHTML = renderContent();
 	});
 
+	let shareImage: Image;
+
+	$: shareImage = post.SEO.SharedImage.media.data.attributes.formats.large;
+
 	$: post = data.post;
 </script>
 
 <svelte:head>
 	<title>{post.SEO.metaTitle}</title>
 	<meta name="description" content={post.SEO.metaDescription} />
+	<meta name="og:image" content={shareImage.url} />
+	<meta name="og:image:width" content={shareImage.width?.toString() || '667'} />
+	<meta name="og:image:height" content={shareImage.height?.toString() || '1000'} />
 </svelte:head>
 
 <main class="bg-paper">
