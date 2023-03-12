@@ -26,7 +26,7 @@
 		class="px-4 tablet:px-16 desktop:px-32 w-full flex flex-col items-center pb-32 tablet:pb-64"
 		style={`background-color: ${post.color}`}
 	>
-		<div class="py-12 flex flex-col justify-center mt-8">
+		<div class="py-12 flex flex-col justify-center mt-8 w-4/5">
 			<div class="flex flex-wrap mb-4 justify-center space-x-4">
 				{#each post.tags.data as tag}
 					<Tag tag={tag.attributes.tag} color={textColor} />
@@ -35,7 +35,9 @@
 			<h1 class={`text-6xl font-sans-condensed text-${textColor} text-center leading-tight`}>
 				{post.title.toUpperCase()}
 			</h1>
-			<p class={`font-sans text-${textColor} mt-8 text-center`}>{post.description}</p>
+			<p class={`font-sans text-${textColor} mt-8 text-center self-center`}>
+				{post.description}
+			</p>
 			<p class={`font-sans text-sm text-${textColor} mt-8 text-right`}>
 				<span class="italic mr-4">{post.releaseDate}</span>
 				{getReadingTime(post.content)}
