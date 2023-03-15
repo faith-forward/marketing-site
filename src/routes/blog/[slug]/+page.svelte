@@ -44,7 +44,13 @@
 
 	let shareImage: Image;
 
-	$: shareImage = post.SEO.SharedImage.media.data.attributes.formats.large;
+	$: {
+		if (post.SEO.SharedImage) {
+			shareImage = post.SEO.SharedImage.media.data.attributes.formats.large;
+		} else {
+			shareImage = post.cover.data.attributes.formats.large;
+		}
+	}
 
 	$: post = data.post;
 </script>

@@ -39,7 +39,7 @@ export type Post = {
 		keywords: string;
 		metaDescription: string;
 		metaTitle: string;
-		SharedImage: {
+		SharedImage?: {
 			id: number;
 			alt: string;
 			media: {
