@@ -21,11 +21,21 @@
 			return '<p class="text-xl text-boldGrey font-sans-bold">' + quote + '</p>';
 		};
 
-		const lines = post.content.split('\n');
+		let lines = post.content.split('\n');
+		// remove whitespace lines that appear after any lines that start with ##
+		lines = lines.filter((line, index) => {
+			if (line.startsWith('##')) {
+				return true;
+			} else if (line.trim() === '') {
+				return lines[index - 1].startsWith('##') ? false : true;
+			} else {
+				return true;
+			}
+		});
 
 		const renderedLines = lines.map((line) => {
 			if (line.startsWith('##')) {
-				return `<h2 class="text-xl text-boldGrey font-sans-bold">${line.slice(2)}</h2>`;
+				return `<br /><h2 class="text-xl text-boldGrey font-sans-bold">${line.slice(2)}</h2>`;
 			} else if (line.startsWith('>')) {
 				return `<p class="text-lg text-boldGrey font-serif-bold leading-relaxed"><span class="bg-[#fff09c]">${line.slice(
 					1
