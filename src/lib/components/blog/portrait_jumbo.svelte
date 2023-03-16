@@ -3,15 +3,18 @@
 	import getReadingTime from '$lib/util/getReadingTime';
 	import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
+	import AuthorListing from '../author_listing.svelte';
 	import Tag from './tag.svelte';
 
 	export let post: Post;
+
+	$: console.log(post.author);
 </script>
 
 <div class="flex justify-between mb-16 relative">
 	<a
 		href="/blog"
-		class="text-grey text-sm font-sans text-lg absolute top-0 left-4 tablet:left-16 desktop:left-32 flex items-center hover:text-blue"
+		class="text-grey text-sm font-sans absolute top-0 left-4 tablet:left-16 desktop:left-32 flex items-center hover:text-blue"
 	>
 		<Fa icon={faArrowLeft} class="mr-2" />
 		Back
@@ -27,8 +30,11 @@
 		<h1 class=" text-6xl font-sans-condensed text-boldGrey leading-tight">
 			{post.title.toUpperCase()}
 		</h1>
-		<p class="font-sans text-grey mt-8 w-3/5">{post.description}</p>
-		<p class="font-sans text-sm text-grey mt-8 w-3/5">
+		<p class="font-sans text-grey mt-8 w-4/5 laptop:w-3/5">{post.description}</p>
+		{#if post.author}
+			<AuthorListing author={post.author} />
+		{/if}
+		<p class="font-sans text-sm text-grey mt-8 w-4/5 laptop:w-3/5">
 			<span class="italic mr-4">{post.releaseDate}</span>
 			{getReadingTime(post.content)}
 		</p>

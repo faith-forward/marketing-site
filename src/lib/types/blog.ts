@@ -5,6 +5,25 @@ export type Image = {
 	alternativeText: string;
 };
 
+export type Author = {
+	data: {
+		attributes: {
+			name: string;
+			bio: string;
+			avatar: {
+				data: {
+					attributes: {
+						alternativeText: string;
+						formats: {
+							thumbnail: Image;
+						};
+					};
+				};
+			};
+		};
+	};
+};
+
 export type Post = {
 	title: string;
 	description: string;
@@ -32,6 +51,7 @@ export type Post = {
 					large: Image;
 					medium: Image;
 				};
+				url: string;
 			};
 		};
 	};
@@ -53,4 +73,5 @@ export type Post = {
 			};
 		};
 	};
+	author?: Author;
 };

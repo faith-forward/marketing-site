@@ -12,7 +12,6 @@
 		try {
 			const res = await fetch(`/api/blogs?page=${page}`);
 			const data: { posts: CMSResponse<Post> } = await res.json();
-			console.log(data);
 			posts = data.posts.data.map((item) => item.attributes);
 		} catch (err) {
 			console.error(err);

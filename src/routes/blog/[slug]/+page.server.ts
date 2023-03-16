@@ -17,6 +17,11 @@ export const load: PageServerLoad = async ({ fetch, params, getClientAddress, re
 		populate: {
 			cover: '*',
 			tags: '*',
+			author: {
+				populate: {
+					avatar: '*'
+				}
+			},
 			SEO: {
 				populate: {
 					SharedImage: {

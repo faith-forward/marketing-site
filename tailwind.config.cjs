@@ -12,6 +12,7 @@ module.exports = {
 				paper: '#F5F5F5',
 				darkPaper: '#eaeaea',
 				boldGrey: '#323438',
+				text: '#3c3e42',
 				white: '#FFFFFF',
 				purple: '#117ed6'
 			},

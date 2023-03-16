@@ -85,7 +85,7 @@
 		{/if}
 		<div class="flex justify-around pb-8 tablet:py-24">
 			<div
-				class={`w-[720px] z-10 font-sans leading-relaxed text-boldGrey px-4 tablet:px-0 ${
+				class={`w-[720px] z-10 font-sans leading-relaxed text-text px-4 tablet:px-0 ${
 					post.isPortrait ? '' : 'moveUp'
 				}`}
 				bind:this={contentDiv}

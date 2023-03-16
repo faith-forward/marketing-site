@@ -4,6 +4,7 @@
 	import getReadingTime from '$lib/util/getReadingTime';
 	import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
+	import AuthorListing from '../author_listing.svelte';
 	import Tag from './tag.svelte';
 
 	export let post: Post;
@@ -15,7 +16,7 @@
 <div class="flex flex-col items-center relative">
 	<a
 		href="/blog"
-		class="text-sm font-sans text-lg absolute top-8 left-4 tablet:left-16 desktop:left-32 flex items-center hover:opacity-[0.9]"
+		class="text-sm font-sans absolute top-8 left-4 tablet:left-16 desktop:left-32 flex items-center hover:opacity-[0.9]"
 		style={`color: ${textColor}`}
 	>
 		<Fa icon={faArrowLeft} class="mr-2" />
@@ -38,15 +39,24 @@
 			<p class={`font-sans text-${textColor} mt-8 text-center self-center`}>
 				{post.description}
 			</p>
-			<p class={`font-sans text-sm text-${textColor} mt-8 text-right`}>
-				<span class="italic mr-4">{post.releaseDate}</span>
-				{getReadingTime(post.content)}
-			</p>
+			<div class="flex justify-between items-center mt-12">
+				{#if post.author}
+					<div class="flex-3">
+						<AuthorListing author={post.author} {textColor} />
+					</div>
+				{/if}
+				<div class="flex-1">
+					<p class={`font-sans text-sm text-${textColor} text-right`}>
+						<span class="italic mr-4">{post.releaseDate}</span>
+						{getReadingTime(post.content)}
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- Blog Cover Image -->
 	<img
-		src={post.cover.data.attributes.formats.large.url}
+		src={post.cover.data.attributes.url}
 		alt={post.cover.data.attributes.alternativeText}
 		class="relative bottom-32 tablet:bottom-64"
 	/>
