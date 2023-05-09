@@ -36,6 +36,8 @@
 		const renderedLines = lines.map((line) => {
 			if (line.startsWith('##')) {
 				return `<br /><h2 class="text-xl text-boldGrey font-sans-bold">${line.slice(2)}</h2>`;
+			} else if (line.startsWith('###')) {
+				return `<br /><h3 class="text-lg text-boldGrey font-sans-bold">${line.slice(3)}</h3>`;
 			} else if (line.startsWith('>')) {
 				return `<p class="text-lg text-boldGrey font-serif-bold leading-relaxed"><span class="bg-[#fff09c]">${line.slice(
 					1
