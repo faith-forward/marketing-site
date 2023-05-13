@@ -14,7 +14,8 @@ module.exports = {
 				boldGrey: '#323438',
 				text: '#3c3e42',
 				white: '#FFFFFF',
-				purple: '#117ed6'
+				purple: '#8440f7',
+				green: '#8fc9bd'
 			},
 			height: {
 				'100v': '100vh'
