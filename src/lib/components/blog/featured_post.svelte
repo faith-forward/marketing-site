@@ -20,7 +20,7 @@
 			{post.description}
 		</p>
 		<a href={`/blog/${post.slug}`} class="flex justify-center tablet:justify-start">
-			<button class="mt-8 rounded-full py-2 px-8 bg-red text-white font-sans-bold self-center"
+			<button class="mt-8 rounded-full py-2 px-8 bg-orange text-white font-sans-bold self-center"
 				>Read</button
 			>
 		</a>

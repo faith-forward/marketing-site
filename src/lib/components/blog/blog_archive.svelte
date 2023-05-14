@@ -9,10 +9,11 @@
 	let loading = true;
 
 	const fetchDevotionals = async () => {
+		loading = true;
 		try {
 			const res = await fetch(`/api/blogs?page=${page}`);
 			const data: { posts: CMSResponse<Post> } = await res.json();
-			posts = data.posts.data.map((item) => item.attributes);
+			posts = posts.concat(data.posts.data.map((item) => item.attributes));
 		} catch (err) {
 			console.error(err);
 		} finally {
@@ -35,7 +36,18 @@
 				</li>
 			{/each}
 		</ul>
+		<div class="flex justify-end">
+			<button
+				class="bg-orange rounded-full text-white font-sans-semi px-4 py-2"
+				on:click={() => {
+					page++;
+					fetchDevotionals();
+				}}
+			>
+				{loading ? 'Loading...' : 'Read Older Posts'}
+			</button>
+		</div>
 	{:else}
-		<p>No posts found.</p>
+		<p>{loading ? 'Loading...' : 'No posts found.'}</p>
 	{/if}
 </section>

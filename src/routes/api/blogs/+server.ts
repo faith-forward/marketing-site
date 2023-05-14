@@ -12,7 +12,7 @@ export const GET: RequestHandler = async ({ url }) => {
 			},
 			pagination: {
 				page: page,
-				pageSize: 16
+				pageSize: 10
 			},
 			populate: '*'
 		});
