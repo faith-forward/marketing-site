@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Container from '$lib/components/Container.svelte';
 	import PhoneScreenshot from '$lib/components/phone_screenshot.svelte';
 
 	type Screenshot = {
@@ -51,15 +52,18 @@
 		d="M0,160L80,170.7C160,181,320,203,480,186.7C640,171,800,117,960,101.3C1120,85,1280,107,1360,117.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
 	/></svg
 >
-<div class="h-100v min-h-[1000px] flex flex-col items-center px-4" id="features">
-	<h2 class="mt-16 text-4xl font-sans-bold text-boldGrey text-center leading-snug">
-		A full suite of features to help <br /> you connect with your faith
-	</h2>
-	<div
-		class="slideshow w-full flex mx-32 space-x-8 mt-16 overflow-x-scroll overflow-y-clip mb-16 py-4 "
-	>
-		{#each screenshots as screenshot}
-			<PhoneScreenshot src={screenshot.src} alt={screenshot.alt} />
-		{/each}
+
+<Container>
+	<div class="h-100v min-h-[1000px] flex flex-col items-center px-4" id="features">
+		<h2 class="mt-16 text-4xl font-sans-bold text-boldGrey text-center leading-snug">
+			A full suite of features to help <br /> you connect with your faith
+		</h2>
+		<div
+			class="slideshow w-full flex mx-32 space-x-8 mt-16 overflow-x-scroll overflow-y-clip mb-16 py-4 "
+		>
+			{#each screenshots as screenshot}
+				<PhoneScreenshot src={screenshot.src} alt={screenshot.alt} />
+			{/each}
+		</div>
 	</div>
-</div>
+</Container>
