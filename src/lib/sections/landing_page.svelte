@@ -37,9 +37,9 @@
 					class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-blue_white font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 				>
 					<span class="bg-blue">
-						Step into a richer spiritual journey with Faith Forward. Our app brings you closer to
-						your faith than ever before, with personalized devotions, comprehensive Bible passages,
-						and profound verse analysis tailored just for you.
+						Step into a richer spiritual journey with Faith Forward. Our app uses AI to bring you
+						closer to your faith than ever before, with personalized devotions, comprehensive Bible
+						passages, and profound verse analysis tailored just for you.
 					</span>
 				</p>
 			</div>

@@ -61,7 +61,7 @@
 	<title>Sermons | Listen to Daily Sermons with Faith Forward</title>
 	<meta
 		name="description"
-		content="Get daily inspiration and personalized Christian devotionals from Faith Forward. Browse our selection of devotionals, tailored to your needs and interests, on a monthly basis. Strengthen your faith and deepen your spiritual journey with our app. Download now and start your journey towards a more fulfilling life."
+		content="Get daily inspiration through our sermons. Browse our selection of sermons, tailored to your needs and interests. Strengthen your faith and deepen your spiritual journey with our app. Download now and start your journey towards a more fulfilling life."
 	/>
 	<meta name="og:image" content="/images/ff large.png" />
 	<meta name="og:image:width" content="600" />

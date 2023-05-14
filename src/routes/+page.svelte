@@ -5,10 +5,10 @@
 </script>
 
 <svelte:head>
-	<title>Faith Forward | Personalized Christian Devotionals for Daily Inspiration</title>
+	<title>Faith Forward | Tap Into Deeper Devotion With AI</title>
 	<meta
 		name="description"
-		content="Receive personalized Christian devotionals based on whatever is on your mind with Faith Forward. Our app offers a unique and tailored approach to devotionals that is designed to inspire and uplift you. Download now and start your journey to a deeper faith."
+		content="Personalized Christian content made just for you. Download our app today for custom devotionals, daily sermons, insightful verse analysis, and more."
 	/>
 	<meta name="facebook-domain-verification" content="yvqkose9v1ptpfvewj2ug97s9nzeya" />
 	<meta name="og:image" content="/images/ff large.png" />
