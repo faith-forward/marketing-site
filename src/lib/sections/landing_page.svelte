@@ -13,38 +13,38 @@
 		class="hidden tablet:flex"
 	/>
 	<img
-		use:lazyLoad={'/images/phone church.webp'}
+		use:lazyLoad={'/images/homepage.webp'}
 		alt="Users experience a whole new world of Faith through a church inside of a phone."
 		id="church"
-		class="desktop:h-[960px] laptop:h-[600px] desktop:mr-[64px] big-laptop:h-[700px] hidden laptop:flex"
+		class="desktop:h-[960px] laptop:h-[700px] desktop:mr-[64px] big-laptop:h-[800px] hidden laptop:flex"
 	/>
 
 	<div
 		class="flex w-full px-12 desktop:px-28 desktop:mt-16 laptop:mt-8 mt-16 flex-col flex-1 justify-between"
 	>
-		<div class="flex flex-col">
+		<div class="flex flex-col mt-24 laptop:mt-0">
 			<div class="flex">
 				<h1
-					class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-white z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start"
+					class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-darkBlue z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start"
 				>
-					<span class="text-yellow">DEVOTIONALS</span> MADE JUST
-					<span class="text-yellow">FOR YOU</span>
+					TAP INTO
+					<span class="text-white">DEEPER DEVOTION</span>
 				</h1>
 			</div>
 			<p
 				class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-blue_white font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 			>
 				<span class="bg-blue">
-					A more personal connection with your faith is just a tap away. Personalized devotions,
-					full Bible passages, in-depth verse analysis, and daily sermons to help you on your
-					journey of spiritual growth.
+					Step into a richer spiritual journey with Faith Forward. Our app brings you closer to your
+					faith than ever before, with personalized devotions, comprehensive Bible passages, and
+					profound verse analysis tailored just for you.
 				</span>
 			</p>
 		</div>
 		<img
-			use:lazyLoad={'https://storage.googleapis.com/faith-forward-media/medium_phone_church_9b0639de61/medium_phone_church_9b0639de61.webp'}
+			use:lazyLoad={'/images/homepage.webp'}
 			alt="Users experience a whole new world of Faith through a church inside of a phone."
-			class="laptop:hidden"
+			class="laptop:hidden w-[80%] self-center"
 		/>
 		<a
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
@@ -88,8 +88,8 @@
 	#church {
 		/* height: 100vh; */
 		position: absolute;
-		right: 24px;
-		top: 50%;
+		right: 64px;
+		top: 55%;
 		transform: translate(0, -50%);
 		z-index: 0;
 	}

@@ -30,7 +30,7 @@
 				href="https://apps.apple.com/us/app/faith-forward/id1661516199"
 				on:click={() => initiateDownload(`/${active || ''}`)}
 			>
-				<button class="bg-red rounded-full py-1 px-4 text-white font-sans-semi text-lg"
+				<button class="bg-orange rounded-full py-1 px-4 text-white font-sans-semi text-lg"
 					>Download</button
 				>
 			</a>
@@ -67,7 +67,7 @@
 				<a
 					href="https://apps.apple.com/us/app/faith-forward/id1661516199"
 					on:click={() => initiateDownload(`/${active || ''}`)}
-					class="text-red font-sans-semi">Download</a
+					class="text-orange font-sans-semi">Download</a
 				>
 			</li>
 		</ul>
@@ -90,7 +90,7 @@
 		height: 2px;
 		bottom: -2px;
 		left: 0;
-		background-color: #ff6f6f;
+		background-color: #ff6745;
 		transition: width 0.2s ease-in-out;
 	}
 

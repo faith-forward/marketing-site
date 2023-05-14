@@ -17,7 +17,10 @@
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
 			on:click={() => initiateDownload('/')}
 		>
-			<button class="bg-red rounded-full py-1 px-4 text-white font-sans-semi text-lg"
+			<!-- <button class="bg-[#ff7000] rounded-full py-1 px-4 text-white font-sans-semi text-lg"
+				>Download</button
+			> -->
+			<button class="bg-orange rounded-full py-1 px-4 text-white font-sans-semi text-lg"
 				>Download</button
 			>
 		</a>
@@ -82,7 +85,7 @@
 		height: 2px;
 		bottom: -2px;
 		left: 0;
-		background-color: #ff6f6f;
+		background-color: #ff6745;
 		transition: width 0.2s ease-in-out;
 	}
 
