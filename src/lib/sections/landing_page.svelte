@@ -24,7 +24,7 @@
 		<div
 			class="flex w-full px-12 desktop:px-28 desktop:mt-16 laptop:mt-8 mt-16 flex-col flex-1 justify-between"
 		>
-			<div class="flex flex-col mt-24 laptop:mt-0">
+			<div class="flex flex-col mt-8 tablet:mt-24 laptop:mt-0">
 				<div class="flex">
 					<h1
 						class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-darkBlue z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start drop-shadow-xl"
@@ -44,9 +44,9 @@
 				</p>
 			</div>
 			<img
-				use:lazyLoad={'/images/homepage.webp'}
+				use:lazyLoad={'/images/homepage mobile.webp'}
 				alt="Users experience a whole new world of Faith through a church inside of a phone."
-				class="laptop:hidden w-[80%] self-center"
+				class="laptop:hidden w-[100%] self-center"
 			/>
 			<a
 				href="https://apps.apple.com/us/app/faith-forward/id1661516199"

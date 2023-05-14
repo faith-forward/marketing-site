@@ -53,17 +53,15 @@
 	/></svg
 >
 
-<Container>
-	<div class="h-100v min-h-[1000px] flex flex-col items-center px-4" id="features">
-		<h2 class="mt-16 text-4xl font-sans-bold text-boldGrey text-center leading-snug">
-			A full suite of features to help <br /> you connect with your faith
-		</h2>
-		<div
-			class="slideshow w-full flex mx-32 space-x-8 mt-16 overflow-x-scroll overflow-y-clip mb-16 py-4 "
-		>
-			{#each screenshots as screenshot}
-				<PhoneScreenshot src={screenshot.src} alt={screenshot.alt} />
-			{/each}
-		</div>
+<div class="h-100v min-h-[1000px] max-w-[1800px] flex flex-col items-center px-4" id="features">
+	<h2 class="mt-16 text-4xl font-sans-bold text-boldGrey text-center leading-snug">
+		A full suite of features to help <br /> you connect with your faith
+	</h2>
+	<div
+		class="slideshow w-full flex mx-32 space-x-8 mt-16 overflow-x-scroll overflow-y-clip mb-16 py-4 "
+	>
+		{#each screenshots as screenshot}
+			<PhoneScreenshot src={screenshot.src} alt={screenshot.alt} />
+		{/each}
 	</div>
-</Container>
+</div>
