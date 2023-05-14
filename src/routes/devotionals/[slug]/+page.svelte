@@ -18,6 +18,9 @@
 <svelte:head>
 	<title>{post.seoTitle}</title>
 	<meta name="description" content={post.seoDescription} />
+	<meta name="og:image" content="/images/ff large.png" />
+	<meta name="og:image:width" content="600" />
+	<meta name="og:image:height" content="600" />
 </svelte:head>
 
 <main class="bg-paper flex flex-col relative">

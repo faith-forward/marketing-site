@@ -5,6 +5,9 @@
 <svelte:head>
 	<title>Privacy Policy | Personalized Christian Inspiration with Faith Forward</title>
 	<meta name="description" content="Read our Privacy Policy." />
+	<meta name="og:image" content="/images/ff large.png" />
+	<meta name="og:image:width" content="600" />
+	<meta name="og:image:height" content="600" />
 </svelte:head>
 
 <main class="flex flex-col bg-paper flex-1">

@@ -30,6 +30,9 @@
 		name="description"
 		content="The Faith Forward Blog offers a collection of inspirational articles about the Christian faith designed to uplift and inspire you. Read our featured articles and discover new ways to deepen your faith. Explore our blog now and start your journey to a more fulfilling spiritual life."
 	/>
+	<meta name="og:image" content="/images/ff large.png" />
+	<meta name="og:image:width" content="600" />
+	<meta name="og:image:height" content="600" />
 </svelte:head>
 
 <main class="flex flex-col bg-paper px-4 tablet:px-16 desktop:px-32">

@@ -63,6 +63,9 @@
 		name="description"
 		content="Get daily inspiration and personalized Christian devotionals from Faith Forward. Browse our selection of devotionals, tailored to your needs and interests, on a monthly basis. Strengthen your faith and deepen your spiritual journey with our app. Download now and start your journey towards a more fulfilling life."
 	/>
+	<meta name="og:image" content="/images/ff large.png" />
+	<meta name="og:image:width" content="600" />
+	<meta name="og:image:height" content="600" />
 </svelte:head>
 
 <main class="flex flex-col bg-paper w-full">
