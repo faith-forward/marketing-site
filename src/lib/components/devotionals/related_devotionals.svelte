@@ -15,6 +15,7 @@
 						title={post.title}
 						description={post.description}
 						releaseDate={post.releaseDate}
+						imageUrl={post.imageUrl}
 					/>
 				</a>
 			{/each}

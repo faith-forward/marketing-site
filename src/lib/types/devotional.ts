@@ -11,4 +11,5 @@ export type Devotional = {
 	tags?: CMSResponse<Tag>;
 	seoDescription: string;
 	seoTitle: string;
+	imageUrl: string;
 };

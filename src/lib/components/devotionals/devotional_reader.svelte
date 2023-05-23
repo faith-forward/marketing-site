@@ -9,6 +9,7 @@
 	export let releaseDate: string;
 	export let content: string;
 	export let quote: string;
+	export let imageUrl: string;
 
 	let contentDiv: HTMLDivElement;
 
@@ -54,8 +55,9 @@
 		</div>
 		<div class="text-boldGrey mt-4 leading-relaxed" bind:this={contentDiv} />
 	</div>
-	<div class="bg-white flex-1 px-16 items-center hidden tablet:flex">
-		<p class="font-serif-bold text-3xl quote text-boldGrey leading-relaxed">
+	<div class="bg-white flex-1 px-16 justify-center hidden tablet:flex flex-col">
+		<img src={imageUrl} alt={title} class="w-full mt-12" />
+		<p class="font-serif-bold text-3xl quote text-boldGrey leading-relaxed mt-12">
 			<span class="highlight">
 				{quote}
 			</span>

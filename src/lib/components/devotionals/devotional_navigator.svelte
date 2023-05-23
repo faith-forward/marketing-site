@@ -81,6 +81,7 @@
 						title={devotional.title}
 						description={devotional.description}
 						releaseDate={devotional.releaseDate}
+						imageUrl={devotional.imageUrl}
 					/>
 				</a>
 			</li>

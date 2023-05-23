@@ -33,6 +33,7 @@
 			content={post.content.replace(/\n/g, '<br />')}
 			releaseDate={post.releaseDate}
 			quote={post.quote}
+			imageUrl={post.imageUrl}
 		/>
 	</section>
 	{#if relatedPosts && relatedPosts.length > 0}
