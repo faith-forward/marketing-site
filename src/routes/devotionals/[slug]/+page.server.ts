@@ -22,6 +22,7 @@ const getRelatedPosts = async (tags: string[], slug: string) => {
 				$ne: slug
 			}
 		},
+		sort: 'releaseDate:desc',
 		pagination: {
 			page: 1,
 			pageSize: 3
