@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.fade-in {
+		animation: fadeIn 0.8s ease-in forwards;
+	}
+
+	.slide-up {
+		animation: slideUp 0.8s ease-in forwards;
+	}
+
+	@keyframes slideUp {
+		from {
+			transform: translateY(30px);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+}

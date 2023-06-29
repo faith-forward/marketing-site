@@ -1,19 +1,13 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
 	import initiateDownload from '$lib/pixel/initiateDownload';
-	import { lazyLoad } from '$lib/util/lazyLoad';
+	import { lazyLoad } from '$lib/hooks/lazyLoad';
 	import Nav from './homepage_nav.svelte';
 </script>
 
 <div class="flex flex-col w-full bg-blue min-h-[100vh] overflow-hidden relative">
 	<Container>
 		<Nav />
-		<img
-			src="/images/blob1.svg"
-			alt="Cloud that encompasses the nav bar."
-			id="blob1"
-			class="hidden tablet:flex"
-		/>
 		<img
 			use:lazyLoad={'/images/homepage.webp'}
 			alt="Users experience a whole new world of Faith through a church inside of a phone."
@@ -27,7 +21,7 @@
 			<div class="flex flex-col mt-8 tablet:mt-24 laptop:mt-0">
 				<div class="flex">
 					<h1
-						class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-darkBlue z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start drop-shadow-xl"
+						class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-darkBlue z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start drop-shadow-xl leading-tight"
 					>
 						TAP INTO
 						<span class="text-white">DEEPER DEVOTION</span>
@@ -37,9 +31,9 @@
 					class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-blue_white font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 				>
 					<span class="bg-blue">
-						Step into a richer spiritual journey with Faith Forward. Our app uses AI to bring you
-						closer to your faith than ever before, with personalized devotions, comprehensive Bible
-						passages, and profound verse analysis tailored just for you.
+						Our app uses AI to bring you closer to your faith than ever before, offering
+						personalized devotions, extensive Bible readings, and deep verse interpretation,
+						alongside an enriched connection with your church. All in one place.
 					</span>
 				</p>
 			</div>
@@ -84,7 +78,8 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		transform: translate(20%, -45%);
+		transform: translate(10%, -45%) scaleX(1.2);
+		rotate: 2deg;
 		z-index: 0;
 	}
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { lazyLoad } from '$lib/util/lazyLoad';
+	import { lazyLoad } from '$lib/hooks/lazyLoad';
 
 	export let src = '';
 	export let alt = '';

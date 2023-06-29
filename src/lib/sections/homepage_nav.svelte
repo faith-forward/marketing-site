@@ -1,5 +1,9 @@
 <script lang="ts">
 	import initiateDownload from '$lib/pixel/initiateDownload';
+	export let churchVersion: boolean = false;
+
+	let textColor: string;
+	$: textColor = churchVersion ? 'text-greenWhite' : 'text-blue_white';
 
 	let showDropdown = false;
 	const toggleDropdown = () => {
@@ -7,31 +11,37 @@
 	};
 </script>
 
-<nav class="px-16 desktop:px-32 pb-16 pt-8 desktop:pt-16 justify-between hidden tablet:flex">
-	<h2 class="text-2xl text-blue_white font-sans-bold">Faith Forward</h2>
-	<div class="flex space-x-8 items-center">
-		<a href="/devotionals" class="text-grey font-sans-semi text-lg link">Devotionals</a>
-		<a href="/sermons" class="text-grey font-sans-semi text-lg link">Sermons</a>
-		<a href="/blog" class="text-grey font-sans-semi text-lg link">Blog</a>
+<nav class="px-16 desktop:px-32 pb-16 pt-8 desktop:pt-16 justify-between hidden laptop:flex">
+	<a href="/" class="hover:cursor-pointer"
+		><h2 class={`text-2xl ${textColor} font-sans-bold`}>Faith Forward</h2></a
+	>
+	<div class={`flex space-x-8 items-center ${textColor}`}>
+		<a href="/churches" class={`font-sans-semi text-lg link ${churchVersion && 'active'}`}>
+			For Churches
+		</a>
+		<a href="/pricing" class="font-sans-semi text-lg link">Pricing</a>
+		<a href="/devotionals" class="font-sans-semi text-lg link">Devotionals</a>
+		<a href="/sermons" class="font-sans-semi text-lg link">Sermons</a>
+		<a href="/blog" class="font-sans-semi text-lg link">Blog</a>
 		<a
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
 			on:click={() => initiateDownload('/')}
 		>
-			<!-- <button class="bg-[#ff7000] rounded-full py-1 px-4 text-white font-sans-semi text-lg"
-				>Download</button
-			> -->
-			<button class="bg-orange rounded-full py-1 px-4 text-white font-sans-semi text-lg"
+			<button
+				class="bg-white text-orange shadow-md rounded-full py-1 px-4 text-white font-sans-semi text-lg"
 				>Download</button
 			>
 		</a>
 	</div>
 </nav>
 
-<nav class="px-4 pt-8 flex flex-col tablet:hidden items-baseline w-full">
+<nav class="px-4 pt-8 flex flex-col laptop:hidden items-baseline w-full">
 	<div class="flex justify-between w-full">
-		<h2 class="text-2xl text-blue_white font-sans-bold">Faith Forward</h2>
+		<a href="/" class="hover:cursor-pointer">
+			<h2 class={`text-2xl ${textColor} font-sans-bold`}>Faith Forward</h2>
+		</a>
 		<button
-			class="text-blue_white text-lg active:text-blue flex tablet:hidden"
+			class="text-blue_white text-lg active:text-blue flex laptop:hidden"
 			on:click={toggleDropdown}
 		>
 			<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -51,8 +61,10 @@
 			</svg>
 		</button>
 	</div>
-	<div class={`tablet:hidden ${!showDropdown ? 'hidden' : 'flex'} flex-col items-end mt-2 w-full`}>
+	<div class={`laptop:hidden ${!showDropdown ? 'hidden' : 'flex'} flex-col items-end mt-2 w-full`}>
 		<ul class="space-y-2 text-right">
+			<li><a href="/churches" class="text-white font-sans-semi">For Churches</a></li>
+			<li><a href="/pricing" class="text-white font-sans-semi">Pricing</a></li>
 			<li><a href="/devotionals" class="text-white font-sans-semi">Devotionals</a></li>
 			<li><a href="/sermons" class="text-white font-sans-semi">Sermons</a></li>
 			<li><a href="/blog" class="text-white font-sans-semi">Blog</a></li>
@@ -85,11 +97,15 @@
 		height: 2px;
 		bottom: -2px;
 		left: 0;
-		background-color: #ff6745;
+		background-color: #e3f9ff;
 		transition: width 0.2s ease-in-out;
 	}
 
 	a.link:hover::before {
+		width: 100%;
+	}
+
+	a.link.active::before {
 		width: 100%;
 	}
 </style>

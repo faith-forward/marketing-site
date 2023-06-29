@@ -1,7 +1,7 @@
 <script lang="ts">
 	import initiateDownload from '$lib/pixel/initiateDownload';
 
-	export let active: 'devotionals' | 'blog' | 'about' | 'sermons' | null = null;
+	export let active: 'devotionals' | 'blog' | 'about' | 'sermons' | 'pricing' | null = null;
 
 	let showDropdown = false;
 	const toggleDropdown = () => {
@@ -9,16 +9,22 @@
 	};
 </script>
 
-<nav class="pb-8 pt-4 desktop:pt-8 flex flex-col">
+<nav class="pb-8 pt-8 desktop:pt-16 flex flex-col">
 	<div class="flex justify-between items-center">
 		<a href="/"><h2 class="text-2xl text-blue font-sans-bold">Faith Forward</h2></a>
-		<div class="space-x-8 items-center hidden tablet:flex">
+		<div class="space-x-8 items-center hidden laptop:flex">
 			<a href="/" class="text-grey font-sans-semi text-lg">About</a>
+			<a href="/churches" class="text-grey font-sans-semi text-lg">For Churches</a>
+			<a
+				href="/pricing"
+				class={`text-grey font-sans-semi text-lg ${active === 'pricing' && 'active'}`}>Pricing</a
+			>
 			<a
 				href="/devotionals"
 				class={`text-grey font-sans-semi text-lg ${active === 'devotionals' && 'active'}`}
-				>Devotionals</a
 			>
+				Devotionals
+			</a>
 			<a
 				href="/sermons"
 				class={`text-grey font-sans-semi text-lg ${active === 'sermons' && 'active'}`}>Sermons</a
@@ -35,7 +41,7 @@
 				>
 			</a>
 		</div>
-		<button class="text-grey text-lg active:text-blue flex tablet:hidden" on:click={toggleDropdown}>
+		<button class="text-grey text-lg active:text-blue flex laptop:hidden" on:click={toggleDropdown}>
 			<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
 				{#if !showDropdown}
 					<path

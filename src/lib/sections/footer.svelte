@@ -1,9 +1,8 @@
-<script>
-	import { lazyLoad } from '$lib/util/lazyLoad';
+<script lang="ts">
+	import { lazyLoad } from '$lib/hooks/lazyLoad';
 	import { faEnvelope, faFileAlt, faLock } from '@fortawesome/free-solid-svg-icons';
 	import { faMedium, faTwitter, faReddit, faAppStore } from '@fortawesome/free-brands-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
-	import Container from '$lib/components/Container.svelte';
 </script>
 
 <footer class="h-[500px] tablet:mt-32 mt-56 relative">
@@ -16,7 +15,7 @@
 		<path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#39ABEB" />
 	</svg>
 	<div
-		class="min-h-[300px] absolute w-full bottom-[0px] py-12 flex flex-col items-center desktop:px-32 tablet:px-16 px-4 bg-blue font-sans-semi text-blue_white "
+		class="min-h-[300px] absolute w-full bottom-[0px] py-12 flex flex-col items-center desktop:px-32 tablet:px-16 px-4 font-sans-semi text-blue_white bg-blue"
 	>
 		<div class="max-w-[1800px] w-full flex flex-col tablet:flex-row items-center flex-1">
 			<div class="flex flex-col flex-1 items-start justify-center w-4/5">

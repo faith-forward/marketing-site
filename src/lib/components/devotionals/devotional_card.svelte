@@ -1,6 +1,6 @@
 <script lang="ts">
 	import formatDate from '$lib/util/formatDate';
-	import { lazyLoad } from '$lib/util/lazyLoad';
+	import { lazyLoad } from '$lib/hooks/lazyLoad';
 
 	export let imageUrl: string;
 	export let title: string;
