@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
+	import { lazyLoad } from '$lib/hooks/lazyLoad';
 	import Nav from '$lib/sections/homepage_nav.svelte';
 	import { fade } from 'svelte/transition';
 
@@ -40,20 +41,27 @@
 <div class="flex flex-col w-full bg-green min-h-[90vh] overflow-hidden relative">
 	<Container>
 		<Nav churchVersion />
+		<img
+			use:lazyLoad={'/images/green homepage.webp'}
+			alt="Users experience a whole new world of Faith through a church inside of a phone."
+			id="church"
+			class="desktop:h-[960px] laptop:h-[700px] desktop:mr-[64px] big-laptop:h-[800px] hidden laptop:flex"
+		/>
+
 		<div
-			class="flex w-full px-12 desktop:px-28 desktop:mt-16 laptop:mt-8 mt-16 flex-1 justify-between"
+			class="flex w-full px-12 desktop:px-28 desktop:mt-16 laptop:mt-8 mt-16 flex-col flex-1 justify-between"
 		>
-			<div class="flex flex-col mt-8 tablet:mt-24 laptop:mt-0 flex-[2] laptop:flex-1">
+			<div class="flex flex-col mt-8 tablet:mt-24 laptop:mt-0">
 				<div class="flex">
 					<h1
-						class="!leading-tight font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-[#2c7a6b] tablet:px-4 text-center tablet:text-start drop-shadow-xl"
+						class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-[#2c7a6b] z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start drop-shadow-xl leading-tight"
 					>
-						REDEFINE
-						<span class="text-white"> YOUR ENGAGEMENT</span>
+						TAP INTO
+						<span class="text-white">DEEPER ENGAGEMENT</span>
 					</h1>
 				</div>
 				<p
-					class="big-laptop:mt-4 big-laptop:text-lg text-base text-[#f0fffc] font-sans-semi py-4 rounded-lg px-4 text-center tablet:text-start"
+					class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-greenWhite font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 				>
 					Supercharge your church's influence with the Faith Forward Church App. Leverage advanced
 					AI capabilities to gain insights from analytics, create compelling content, and manage all
@@ -69,9 +77,13 @@
 					</button>
 				</div>
 			</div>
-			<div class="flex-1 hidden tablet:flex" />
-		</div>
-	</Container>
+			<img
+				use:lazyLoad={'/images/green homepage mobile.webp'}
+				alt="Users experience a whole new world of Faith through a church inside of a phone."
+				class="laptop:hidden w-[90vw] tablet:w-[60vw] self-center"
+			/>
+		</div></Container
+	>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240" class="mt-[-4px]"
 	><path
@@ -106,5 +118,18 @@
 		width: 40px;
 		height: 40px;
 		border-radius: 100%;
+	}
+
+	#church {
+		/* height: 100vh; */
+		position: absolute;
+		right: 64px;
+		top: 55%;
+		transform: translate(0, -50%);
+		z-index: 0;
+	}
+
+	h1 {
+		line-height: 1.2;
 	}
 </style>
