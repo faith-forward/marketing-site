@@ -13,7 +13,7 @@
 		{
 			title: 'AI-Assisted Drafting',
 			subtitle: 'Revolutionize Your Writing Process',
-			image: 'images/writing_desk/autogenerate.png',
+			image: 'images/writing_desk/autogenerate.webp',
 			description:
 				'With the advanced power of ChatGPT at your disposal, let AI fuel your creativity. Write sermons and devotionals more effortlessly as our system suggests content, phrases, and ideas to enhance your first drafts. Step into the future of writing where artificial intelligence empowers your words.'
 		},
@@ -22,12 +22,12 @@
 			subtitle: 'Refine and Perfect with AI-Insights',
 			description:
 				'Elevate your writing with our intelligent feedback system. Our AI-powered revision process provides real-time constructive feedback, suggesting improvements to make your content more compelling. It helps you iterate quickly and efficiently, refining your thoughts into powerful messages that resonate with your congregation.',
-			image: 'images/writing_desk/feedback.png'
+			image: 'images/writing_desk/feedback.webp'
 		},
 		{
 			title: 'Image Library',
 			subtitle: 'Visualize Your Message with Impact',
-			image: 'images/writing_desk/images.png',
+			image: 'images/writing_desk/images.webp',
 			description:
 				'Create engaging content by adding striking visuals from our vast image library. Our Image Selector allows you to search and choose from millions of high-quality photos that fit your message, making your content more captivating and impactful.'
 		},
@@ -36,7 +36,7 @@
 			subtitle: 'Optimize Content Delivery for Your Congregation',
 			description:
 				"Take control of your content dissemination with our easy-to-use publishing tool. Configure essential details, schedule publish dates, and push your content directly to your congregation's feeds. With Faith Forward's Writing Desk, not only create but also manage and deliver your content effectively.",
-			image: 'images/writing_desk/publishing.png'
+			image: 'images/writing_desk/publishing.webp'
 		}
 	];
 
