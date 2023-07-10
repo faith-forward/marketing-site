@@ -69,20 +69,6 @@
 </div>
 
 <style>
-	#blob1 {
-		width: 50%;
-		max-width: 1100px;
-		min-width: 750px;
-		/* place the blob in the top right corner and 
-    translate so that the blob is centered on the right corner of the screen */
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translate(10%, -45%) scaleX(1.2);
-		rotate: 2deg;
-		z-index: 0;
-	}
-
 	#church {
 		/* height: 100vh; */
 		position: absolute;
