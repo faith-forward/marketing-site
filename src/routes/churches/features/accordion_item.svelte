@@ -24,8 +24,8 @@
 >
 	<div class="w-full flex flex-col">
 		<h3
-			class="font-sans-semi text-lg mb-1 text-boldGrey hover:!text-green transition-color duration-100 flex justify-between items-center"
-			class:text-green={currentActive === id}
+			class="font-sans-semi text-lg mb-1 text-boldGrey hover:!text-blue transition-color duration-100 flex justify-between items-center"
+			class:text-blue={currentActive === id}
 		>
 			{title}
 			<div

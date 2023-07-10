@@ -42,7 +42,7 @@
 		<div class="flex flex-col flex-1">
 			<h3 class="text-center text-lg font-sans-semi text-boldGre">What we do</h3>
 			<p class="text-grey font-sans mt-2">
-				Faith Forward is a transformative Church Management Software (CMS) armed with a suite of
+				Faith Forward is a transformative Church Management Software (ChMS) armed with a suite of
 				tools, integrations, and resources designed to elevate the way your church connects,
 				manages, and grows. Seamlessly bridging technology and spirituality, Faith Forward empowers
 				you to focus on what truly matters: your congregation. <br /><br />

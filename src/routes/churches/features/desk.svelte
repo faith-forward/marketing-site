@@ -48,12 +48,14 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" class="mb-[-2px] mt-[-64px]" viewBox="0 0 1440 320"
 	><path
-		fill="#8FC9BD"
+		fill="#24313b"
 		fill-opacity="1"
 		d="M0,160L120,176C240,192,480,224,720,224C960,224,1200,192,1320,176L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
 	/></svg
 >
-<section class="flex flex-col bg-green px-4 tablet:px-16 desktop:px-32 items-center flex-1 pt-4">
+<section
+	class="flex flex-col bg-churchBackground px-4 tablet:px-16 desktop:px-32 items-center flex-1 pt-4"
+>
 	<h2 class="text-4xl font-sans-bold text-white text-center leading-snug" use:fadeIn>
 		Elevate Your Content Creation with AI
 	</h2>
@@ -100,7 +102,7 @@
 </section>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 	<path
-		fill="#8FC9BD"
+		fill="#24313b"
 		fill-opacity="1"
 		d="M0,96L80,85.3C160,75,320,53,480,42.7C640,32,800,32,960,53.3C1120,75,1280,117,1360,138.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
 	/>

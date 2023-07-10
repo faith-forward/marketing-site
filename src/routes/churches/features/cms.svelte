@@ -62,7 +62,7 @@
 					<div class="flex flex-col flex-1">
 						<div class="mb-4">
 							<span
-								class="bg-green px-4 py-1 rounded-full text-white font-sans-semi uppercase text-xs tracking-wider"
+								class="bg-blue px-4 py-1 rounded-full text-white font-sans-semi uppercase text-xs tracking-wider"
 								>{feature.tag}</span
 							>
 						</div>

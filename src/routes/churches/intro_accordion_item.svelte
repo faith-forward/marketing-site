@@ -29,7 +29,7 @@
           transform 
           transition
           mr-2
-          text-green
+          text-orange
       "
 		>
 			{#if currentActive === id}
