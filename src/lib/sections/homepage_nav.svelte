@@ -2,8 +2,7 @@
 	import initiateDownload from '$lib/pixel/initiateDownload';
 	export let churchVersion: boolean = false;
 
-	let textColor: string;
-	$: textColor = churchVersion ? 'text-greenWhite' : 'text-blue_white';
+	let textColor: string = 'text-blue_white';
 
 	let showDropdown = false;
 	const toggleDropdown = () => {
@@ -28,8 +27,9 @@
 			on:click={() => initiateDownload('/')}
 		>
 			<button
-				class="bg-white text-orange shadow-md rounded-full py-1 px-4 text-white font-sans-semi text-lg"
-				>Download</button
+				class={`${
+					churchVersion ? 'bg-blue text-white' : 'bg-white text-orange'
+				} shadow-md rounded-full py-1 px-4 text-white font-sans-semi text-lg`}>Download</button
 			>
 		</a>
 	</div>
