@@ -14,7 +14,7 @@
 <!-- Calendly badge widget begin -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 {#if open}
-	<div class="overlay" in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
+	<div class="overlay" in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
 		<button class="overlay" aria-label="Close modal" on:click={handleClose} />
 
 		<div class="modal rounded-2xl p-16 w-[100vw] tablet:w-[80vw] laptop:w-[50vw] h-[90vh]">
@@ -38,15 +38,16 @@
 		</div>
 	</div>
 {/if}
-<div class="flex flex-col w-full bg-green min-h-[90vh] overflow-hidden relative">
+<div class="flex flex-col w-full bg-churchBackground min-h-[90vh] overflow-hidden relative">
 	<Container>
 		<Nav churchVersion />
 		<img
-			use:lazyLoad={'/images/green homepage.webp'}
-			alt="Users experience a whole new world of Faith through a church inside of a phone."
+			use:lazyLoad={'/images/church homepage.webp'}
+			alt="A demo of the Faith Forward Church App integrating with the mobile app."
 			id="church"
-			class="desktop:h-[960px] laptop:h-[700px] desktop:mr-[64px] big-laptop:h-[800px] hidden laptop:flex"
+			class="hidden laptop:flex desktop:h-[640px] laptop:h-[400px] big-laptop:h-[600px] desktop:mr-[32px]"
 		/>
+		<!-- class="desktop:h-[960px] laptop:h-[700px] desktop:mr-[64px] big-laptop:h-[800px] hidden laptop:flex" -->
 
 		<div
 			class="flex w-full px-12 desktop:px-28 desktop:mt-16 laptop:mt-8 mt-16 flex-col flex-1 justify-between"
@@ -54,23 +55,23 @@
 			<div class="flex flex-col mt-8 tablet:mt-24 laptop:mt-0">
 				<div class="flex">
 					<h1
-						class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-[#2c7a6b] z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start drop-shadow-xl leading-tight"
+						class="font-sans-condensed desktop:text-8xl laptop:text-7xl tablet:text-6xl text-5xl text-blue z-10 tablet:px-4 laptop:w-3/5 tablet:w-4/5 text-center tablet:text-start drop-shadow-xl leading-tight"
 					>
 						TAP INTO
 						<span class="text-white">DEEPER ENGAGEMENT</span>
 					</h1>
 				</div>
 				<p
-					class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-greenWhite font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
+					class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-blue_white font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 				>
 					Supercharge your church's influence with the Faith Forward Church App. Leverage advanced
-					AI capabilities to gain insights from analytics, create compelling content, and manage all
-					your resources effectively. Craft deeply personalized spiritual experiences for your
-					congregation, shaping a future of faith that's truly transformative.
+					AI capabilities to gain insights on your congregation, create compelling content, and
+					manage all your resources effectively. Craft deeply personalized spiritual experiences for
+					your congregation, shaping a future of faith that's truly transformative.
 				</p>
 				<div class="tablet:px-4 mt-4 flex justify-center tablet:justify-start">
 					<button
-						class="px-6 py-3 bg-white rounded-full text-orange shadow-md font-sans-semi text-lg"
+						class="px-6 py-3 bg-blue rounded-full text-white shadow-md font-sans-semi text-lg"
 						on:click={() => (open = true)}
 					>
 						Book a Demo
@@ -78,8 +79,8 @@
 				</div>
 			</div>
 			<img
-				use:lazyLoad={'/images/green homepage mobile.webp'}
-				alt="Users experience a whole new world of Faith through a church inside of a phone."
+				use:lazyLoad={'/images/church homepage mobile.webp'}
+				alt="A demo of the Faith Forward Church App integrating with the mobile app."
 				class="laptop:hidden w-[90vw] tablet:w-[60vw] self-center"
 			/>
 		</div></Container
@@ -87,7 +88,7 @@
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240" class="mt-[-4px]"
 	><path
-		fill="#8fc9bd"
+		fill="#24313b"
 		d="M0,160L80,170.7C160,181,320,203,480,186.7C640,171,800,117,960,101.3C1120,85,1280,107,1360,117.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
 	/></svg
 >
@@ -100,7 +101,7 @@
 		width: 100vw;
 		height: 100vh;
 		background: rgba(0, 0, 0, 0.4);
-		z-index: 2;
+		z-index: 20;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -110,7 +111,7 @@
 		background: #fbfcfd;
 		/* overflow: scroll; */
 		/* border: 4px solid black; */
-		z-index: 3;
+		z-index: 120;
 	}
 
 	.modal button {
@@ -124,7 +125,7 @@
 		/* height: 100vh; */
 		position: absolute;
 		right: 64px;
-		top: 55%;
+		top: 60%;
 		transform: translate(0, -50%);
 		z-index: 0;
 	}
