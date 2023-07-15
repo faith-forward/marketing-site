@@ -64,10 +64,7 @@
 				<p
 					class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-blue_white font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 				>
-					Supercharge your church's influence with the Faith Forward Church App. Leverage advanced
-					AI capabilities to gain insights on your congregation, create compelling content, and
-					manage all your resources effectively. Craft deeply personalized spiritual experiences for
-					your congregation, shaping a future of faith that's truly transformative.
+					Supercharge your church's influence by leveraging cutting-edge AI. Gain insights on your congregation and create captivating content all under one digital roof. It's not just technology; it's faith, amplified.
 				</p>
 				<div class="tablet:px-4 mt-4 flex justify-center tablet:justify-start">
 					<button

@@ -15,27 +15,27 @@
 			subtitle: 'Revolutionize Your Writing Process',
 			image: 'images/writing_desk/autogenerate.webp',
 			description:
-				'With the advanced power of ChatGPT at your disposal, let AI fuel your creativity. Write sermons and devotionals more effortlessly as our system suggests content, phrases, and ideas to enhance your first drafts. Step into the future of writing where artificial intelligence empowers your words.'
+				'Embrace the future of sermon writing with AI-Assisted Drafting. Let the advanced power of AI ignite your creativity, providing tailored suggestions to amplify your message. With our system streamlining your writing process, you'll find an intuitive partner in crafting inspiring sermons and devotionals.'
 		},
 		{
 			title: 'Intuitive Feedback & Revision',
 			subtitle: 'Refine and Perfect with AI-Insights',
 			description:
-				'Elevate your writing with our intelligent feedback system. Our AI-powered revision process provides real-time constructive feedback, suggesting improvements to make your content more compelling. It helps you iterate quickly and efficiently, refining your thoughts into powerful messages that resonate with your congregation.',
+				'Reimagine your writing process with our AI-Powered Feedback and Revision System. This intelligent tool provides immediate, insightful suggestions to enhance clarity, improve engagement, and perfect your style. The result? Faster, more efficient drafting and revisions, refining your spiritual messages to deeply resonate with your congregation.',
 			image: 'images/writing_desk/feedback.webp'
 		},
 		{
 			title: 'Image Library',
-			subtitle: 'Visualize Your Message with Impact',
+			subtitle: 'Visualize Your Message',
 			image: 'images/writing_desk/images.webp',
 			description:
-				'Create engaging content by adding striking visuals from our vast image library. Our Image Selector allows you to search and choose from millions of high-quality photos that fit your message, making your content more captivating and impactful.'
+				'Breathe life into your content with our expansive image library. Handpick from millions of high-quality images and find the perfect visual complement to amplify your message.'
 		},
 		{
 			title: 'Publish with Precision',
 			subtitle: 'Optimize Content Delivery for Your Congregation',
 			description:
-				"Take control of your content dissemination with our easy-to-use publishing tool. Configure essential details, schedule publish dates, and push your content directly to your congregation's feeds. With Faith Forward's Writing Desk, not only create but also manage and deliver your content effectively.",
+				"Optimize your publishing process with Faith Forward's Writing Desk. From crafting to scheduling to delivering, push meaningful content directly to your congregation's feeds with ease.",
 			image: 'images/writing_desk/publishing.webp'
 		}
 	];

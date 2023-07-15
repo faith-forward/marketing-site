@@ -8,11 +8,11 @@
 	const items = [
 		{
 			title: 'Boost Engagement',
-			text: 'Understand your congregation on a deeper level and tailor your approach for increased participation with our advanced analytics.'
+			text: 'Discover the pulse of your congregation and create engaging content tailored to their interests.'
 		},
 		{
 			title: 'Optimize Your Writing Process with AI',
-			text: 'Use the potential of AI to refine your writing, making your sermons and devotionals more persuasive and meaningful with our state-of-the-art writing desk.'
+			text: 'Our AI writing assistant will refine your writing process giving you the tools to focus on what matters most.'
 		},
 		{
 			title: 'Streamline Your Content Delivery',
@@ -42,14 +42,12 @@
 		<div class="flex flex-col flex-1">
 			<h3 class="text-center text-lg font-sans-semi text-boldGre">What we do</h3>
 			<p class="text-grey font-sans mt-2">
-				Faith Forward is a transformative Church Management Software (ChMS) armed with a suite of
-				tools, integrations, and resources designed to elevate the way your church connects,
-				manages, and grows. Seamlessly bridging technology and spirituality, Faith Forward empowers
-				you to focus on what truly matters: your congregation. <br /><br />
-				Our comprehensive platform is designed to serve your church's unique needs. It brings together
-				content management, community engagement, personalized devotions, and insightful analytics under
-				one unified digital roof. With Faith Forward, every interaction, every sermon, every message
-				is an opportunity to foster deeper connections within your church community.
+				Unlock a new era of church management with Faith Forward, a revolutionary Church Management Software (ChMS) 
+				that seamlessly merges technology and spirituality. Our platform empowers you to foster growth, 
+				effortlessly connecting, organizing, and expanding your church community.<br /><br />
+				Discover a comprehensive solution designed to meet your unique needs. Faith Forward integrates content management, 
+				community engagement, personalized devotions, and insightful analytics into a unified digital hub. 
+				Every interaction, devotional, and message becomes an opportunity to cultivate profound connections within your church.
 			</p>
 		</div>
 		<div class="flex flex-col flex-1 mt-24 tablet:mt-0">
