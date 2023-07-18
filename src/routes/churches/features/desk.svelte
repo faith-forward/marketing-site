@@ -15,7 +15,7 @@
 			subtitle: 'Revolutionize Your Writing Process',
 			image: 'images/writing_desk/autogenerate.webp',
 			description:
-				'Embrace the future of sermon writing with AI-Assisted Drafting. Let the advanced power of AI ignite your creativity, providing tailored suggestions to amplify your message. With our system streamlining your writing process, you'll find an intuitive partner in crafting inspiring sermons and devotionals.'
+				"Embrace the future of sermon writing with AI-Assisted Drafting. Let the advanced power of AI ignite your creativity, providing tailored suggestions to amplify your message. With our system streamlining your writing process, you'll find an intuitive partner in crafting inspiring sermons and devotionals."
 		},
 		{
 			title: 'Intuitive Feedback & Revision',
