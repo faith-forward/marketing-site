@@ -12,28 +12,28 @@
 		{
 			title: 'Seamless App Integration',
 			description:
-				"Drive deeper devotion by publishing your enriching content directly to Faith Forward. Your unique spiritual insights will appear directly in your congregation's feed, making their faith journey more personal and profound. The simplicity of direct publishing eliminates complexities, allowing you to focus more on creating inspiring content.",
+				"Publish directly to Faith Forward and let our advanced AI integrate your message into personalized content for your congregation.",
 			imageUrl: 'images/content-publishing.svg',
 			tag: 'Publishing'
 		},
 		{
 			title: 'Effortlessly Manage Content',
 			description:
-				'Keep your congregation engaged and uplifted with our advanced schedule management feature. Strategically plan and schedule your sermons, devotionals, and other content to reach your audience at the most impactful times. With our user-friendly CMS page, you can plan ahead and ensure a continuous flow of spiritually uplifting content for your congregation.',
+				'Strategically plan and schedule your sermons, devotionals, and other content to reach your audience at the most impactful times. With our user-friendly CMS page, you can plan ahead and ensure a continuous flow of spiritually uplifting content for your congregation.',
 			imageUrl: 'images/content-optimization.svg',
 			tag: 'Scheduling'
 		},
 		{
 			title: 'AI-Powered Content Discovery',
 			description:
-				'Unearth the most relevant content for your congregation with our advanced AI-powered search bar. Using cutting-edge semantic search technology, we go beyond simple keyword matching, understanding the context and meaning of your search queries. This smart technology ensures you and your congregation finds the content they need when they need it, enriching their faith journey.',
+				'Relevant content, every search. Our AI understands the context and meaning of your search queries, delivering the most relevant content every time.',
 			imageUrl: 'images/analytics-integration.svg',
 			tag: 'Searching'
 		},
 		{
-			title: 'Revolutionary YouTube Integration',
+			title: 'YouTube Integration',
 			description:
-				"Maximize your reach and impact by importing your YouTube content directly into Faith Forward. Our innovative feature not only pulls your YouTube videos but also transcribes them, allowing your congregation to access your inspiring content in the format that suits them best. This direct interfacing enriches your churchgoers' experience, keeping them engaged and connected with your spiritual teachings.",
+				"Connect your YouTube videos and let our smart AI transform them into impactful, personalized messages. It's not just about transcribing—it's about delivering your wisdom at the most resonant moments.",
 			imageUrl: 'images/collaboration-tools.svg',
 			tag: 'Importing'
 		}
