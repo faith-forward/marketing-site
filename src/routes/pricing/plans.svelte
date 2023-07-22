@@ -36,21 +36,9 @@
 
 	const churchPlans: PricingPlan[] = [
 		{
-			level: 'Basic Church Plan',
-			price: 'Free',
-			subtitle: null,
-			features: [
-				'Access to CMS for publishing and scheduling',
-				'Basic analytics',
-				'Limited usage of Writing Desk',
-				"AI-powered search functionality within your church's content",
-				'$1/month for premium member seats'
-			]
-		},
-		{
 			level: 'Premium Church Plan',
 			price: '$20/month',
-			subtitle: 'All the benefits of the Basic plan, plus...',
+			subtitle: null,
 			features: [
 				'Advanced analytics and insight reports',
 				"Personalized content and devotionals reflecting your church's unique beliefs",
@@ -59,8 +47,7 @@
 				'Access to premium features and updates as they are released',
 				'Unlimited usage of the Writing Desk',
 				'Access to AI-powered writing tools',
-				'15 free premium member seats',
-				'$0.50/month for premium member seats'
+				'Premium access for your entire congregation'
 			]
 		}
 	];
@@ -84,6 +71,6 @@
 </p>
 <div class="flex flex-col tablet:flex-row tablet:space-x-8 w-full mt-8">
 	{#each churchPlans as plan (plan.level)}
-		<PricingCard {...plan} />
+		<PricingCard {...plan} forChurches />
 	{/each}
 </div>
