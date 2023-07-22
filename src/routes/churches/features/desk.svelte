@@ -15,13 +15,13 @@
 			subtitle: 'Revolutionize Your Writing Process',
 			image: 'images/writing_desk/autogenerate.webp',
 			description:
-				"Embrace the future of sermon writing with AI-Assisted Drafting. Let the advanced power of AI ignite your creativity, providing tailored suggestions to amplify your message. With our system streamlining your writing process, you'll find an intuitive partner in crafting inspiring sermons and devotionals."
+				"Let the advanced power of AI ignite your creativity, providing tailored suggestions to amplify your message. With our system streamlining your writing process, you'll find an intuitive partner in crafting inspiring sermons and devotionals."
 		},
 		{
 			title: 'Intuitive Feedback & Revision',
 			subtitle: 'Refine and Perfect with AI-Insights',
 			description:
-				'Reimagine your writing process with our AI-Powered Feedback and Revision System. This intelligent tool provides immediate, insightful suggestions to enhance clarity, improve engagement, and perfect your style. The result? Faster, more efficient drafting and revisions, refining your spiritual messages to deeply resonate with your congregation.',
+				'This intelligent tool provides immediate, insightful suggestions to enhance clarity, improve engagement, and perfect your style. The result? Faster, more efficient drafting and revisions, refining your spiritual messages to deeply resonate with your congregation.',
 			image: 'images/writing_desk/feedback.webp'
 		},
 		{
@@ -35,7 +35,7 @@
 			title: 'Publish with Precision',
 			subtitle: 'Optimize Content Delivery for Your Congregation',
 			description:
-				"Optimize your publishing process with Faith Forward's Writing Desk. From crafting to scheduling to delivering, push meaningful content directly to your congregation's feeds with ease.",
+				"From crafting to scheduling to delivering, push meaningful content directly to your congregation's feeds with ease.",
 			image: 'images/writing_desk/publishing.webp'
 		}
 	];
