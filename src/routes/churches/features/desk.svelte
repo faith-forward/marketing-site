@@ -21,7 +21,7 @@
 			title: 'Intuitive Feedback & Revision',
 			subtitle: 'Refine and Perfect with AI-Insights',
 			description:
-				'This intelligent tool provides immediate, insightful suggestions to enhance clarity, improve engagement, and perfect your style. The result? Faster, more efficient drafting and revisions, refining your spiritual messages to deeply resonate with your congregation.',
+				'Receive immediate, insightful suggestions to enhance clarity, improve engagement, and perfect your writing style. The result? Faster, more efficient drafting and revisions, refining your spiritual messages to deeply resonate with your congregation.',
 			image: 'images/writing_desk/feedback.webp'
 		},
 		{
