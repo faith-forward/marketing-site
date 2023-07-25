@@ -21,8 +21,8 @@
 		<div class="flex flex-col space-y-6 leading-relaxed px-4 laptop:w-3/5 tablet:w-4/5 w-full">
 			<h2 class="text-xl font-sans-semi">Privacy Policy</h2>
 			<p>
-				Lil Bro Co built the Faith Forward app as a Freemium app. This SERVICE is provided by Lil
-				Bro Co at no cost and is intended for use as is.
+				Faith Forward, Inc built the Faith Forward app as a Freemium app. This SERVICE is provided by
+				Faith Forward, Inc at no cost and is intended for use as is.
 			</p>
 			<p>
 				This page is used to inform visitors regarding our policies with the collection, use, and
