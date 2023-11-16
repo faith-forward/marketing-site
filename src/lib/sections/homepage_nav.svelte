@@ -15,9 +15,6 @@
 		><h2 class={`text-2xl ${textColor} font-sans-bold`}>Faith Forward</h2></a
 	>
 	<div class={`flex space-x-8 items-center ${textColor}`}>
-		<a href="/" class={`font-sans-semi text-lg link`}>
-			About
-		</a>
 		<a href="/blog" class="font-sans-semi text-lg link">Blog</a>
 		<a
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
@@ -60,7 +57,6 @@
 	</div>
 	<div class={`laptop:hidden ${!showDropdown ? 'hidden' : 'flex'} flex-col items-end mt-2 w-full`}>
 		<ul class="space-y-2 text-right">
-			<li><a href="/" class="text-white font-sans-semi">About</a></li>
 			<li><a href="/blog" class="text-white font-sans-semi">Blog</a></li>
 			<li>
 				<a
@@ -96,10 +92,6 @@
 	}
 
 	a.link:hover::before {
-		width: 100%;
-	}
-
-	a.link.active::before {
 		width: 100%;
 	}
 </style>

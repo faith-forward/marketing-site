@@ -13,7 +13,6 @@
 	<div class="flex justify-between items-center">
 		<a href="/"><h2 class="text-2xl text-blue font-sans-bold">Faith Forward</h2></a>
 		<div class="space-x-8 items-center hidden laptop:flex">
-			<a href="/" class="text-grey font-sans-semi text-lg">About</a>
 			<a href="/blog" class={`text-grey font-sans-semi text-lg ${active === 'blog' && 'active'}`}
 				>Blog</a
 			>
@@ -50,7 +49,6 @@
 		aria-haspopup="menu"
 	>
 		<ul class="space-y-2 text-right">
-			<li><a href="/" class="text-grey font-sans-semi">About</a></li>
 			<li><a href="/blog" class="text-grey font-sans-semi">Blog</a></li>
 			<li>
 				<a
