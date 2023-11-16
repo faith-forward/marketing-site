@@ -5,122 +5,70 @@
 		level: string;
 		price: string;
 		subtitle: string | null;
-		features: { heading: string; subheading: string }[];
+		features: string[];
 		planType: 'individual' | 'church' | 'enterprise';
 	};
 
 	const individualPlans: PricingPlan[] = [
 		{
+			planType: 'individual',
 			level: 'Individual',
 			price: 'Free',
 			subtitle: 'Empower Your Faith Journey',
 			features: [
-				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
-				{
-					heading: 'Personalized Devotionals',
-					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
-				},
-				{
-					heading: 'Daily Inspiration',
-					subheading: 'New classic devotionals and audio sermons every day.'
-				},
-				{
-					heading: 'The Bible, at Your Fingertips',
-					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
-				},
-				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
-				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
-				{
-					heading: 'Church Connection',
-					subheading: 'Seamlessly link with your church for exclusive content and updates.'
-				}
+				'Unrestricted access to all mobile app features anytime, anywhere.',
+				'Personalized content tailored to your spiritual journey.',
+				'Fresh new devotionals and audio sermons every day.',
+				'Effortlessly search and study the Bible with advanced tools.',
+				'AI-driven spiritual advice and insights on-demand.',
+				'Easily bookmark and share content that resonates with you.',
+				'Connect with your church and community.'
 			]
 		}
-	].map((plan) => ({ ...plan, planType: 'individual' }));
+	];
 
 	const churchPlans: PricingPlan[] = [
 		{
+			planType: 'church',
 			level: 'Church: Basic',
 			price: 'Free',
 			subtitle: 'Engage Your Congregation Digitally',
 			features: [
-				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
-				{
-					heading: 'Personalized Devotionals',
-					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
-				},
-				{
-					heading: 'Daily Inspiration',
-					subheading: 'New classic devotionals and audio sermons every day.'
-				},
-				{
-					heading: 'The Bible, at Your Fingertips',
-					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
-				},
-				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
-				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
-				{
-					heading: 'Church Connection',
-					subheading: 'Seamlessly link with your church for exclusive content and updates.'
-				}
+				"Tailor your church's digital presence.",
+				'Easily write, schedule, and publish posts to engage your congregation.',
+				"Quickly find what you're looking for with advanced search capabilities.",
+				'Connect and share relevant content with your church community.'
 			]
 		},
 		{
+			planType: 'church',
 			level: 'Church: Premium',
 			price: '$20/month',
 			subtitle: "Elevate Your Ministry's Impact",
 			features: [
-				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
-				{
-					heading: 'Personalized Devotionals',
-					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
-				},
-				{
-					heading: 'Daily Inspiration',
-					subheading: 'New classic devotionals and audio sermons every day.'
-				},
-				{
-					heading: 'The Bible, at Your Fingertips',
-					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
-				},
-				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
-				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
-				{
-					heading: 'Church Connection',
-					subheading: 'Seamlessly link with your church for exclusive content and updates.'
-				}
+				'Ensure all church content reflects your style, values, and beliefs.',
+				'Utilize AI tools for draft generation and creative writing support.',
+				'Analyze and boost content engagement.',
+				'Powerful YouTube integration to get more out of your existing library.',
+				'Get fast, specialized assistance whenever you need it.'
 			]
 		}
-	].map((plan) => ({ ...plan, planType: 'church' }));
+	];
 
 	const enterprisePlans: PricingPlan[] = [
 		{
+			planType: 'enterprise',
 			level: 'Enterprise',
 			price: 'Contact Us',
 			subtitle: 'Scale Your Faith-Based Services',
 			features: [
-				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
-				{
-					heading: 'Personalized Devotionals',
-					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
-				},
-				{
-					heading: 'Daily Inspiration',
-					subheading: 'New classic devotionals and audio sermons every day.'
-				},
-				{
-					heading: 'The Bible, at Your Fingertips',
-					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
-				},
-				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
-				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
-				{
-					heading: 'Church Connection',
-					subheading: 'Seamlessly link with your church for exclusive content and updates.'
-				}
+				'Top-tier, personalized assistance for anything your organization needs.',
+				'Seamlessly blend Faith Forward features with your current system.',
+				'Leverage cutting-edge technology for stronger spiritual engagement.',
+				'Offer Faith Forward services under your own brand identity.'
 			]
 		}
-	].map((plan) => ({ ...plan, planType: 'enterprise' }));
+	];
 
 	const allPlans = [...individualPlans, ...churchPlans, ...enterprisePlans];
 </script>

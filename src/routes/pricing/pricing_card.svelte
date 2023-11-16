@@ -5,10 +5,8 @@
 	export let level: string;
 	export let price: string;
 	export let subtitle: string | null = null;
-	export let features: string[];
+	export let features: string[] = [];
 	export let planType: 'individual' | 'church' | 'enterprise';
-	// TODO: handle heading/subheading objects for features attr
-	// TODO: redesign level/subtitle
 </script>
 
 <div
@@ -27,13 +25,6 @@
 	>
 		{level}
 	</h2>
-	<p
-		class="text-2xl font-sans-bold mt-2"
-		class:text-boldGrey={planType === 'individual'}
-		class:text-white={planType !== 'individual'}
-	>
-		{price}
-	</p>
 	{#if subtitle}
 		<p
 			class="text-xs font-sans mt-2"
@@ -43,15 +34,22 @@
 			{subtitle}
 		</p>
 	{/if}
+	<p
+		class="text-2xl font-sans-bold mt-2"
+		class:text-boldGrey={planType === 'individual'}
+		class:text-white={planType !== 'individual'}
+	>
+		{price}
+	</p>
 	<ul
 		class="flex flex-col space-y-2 mt-4"
 		class:text-grey={planType === 'individual'}
 		class:text-white={planType !== 'individual'}
 	>
 		{#each features as feature (feature)}
-			<li class="flex items-center font-sans">
+			<li class="flex items-center">
 				<Fa icon={faCheckCircle} class="mr-2" />
-				{feature}
+				<p class="text-sm">{feature}</p>
 			</li>
 		{/each}
 	</ul>
