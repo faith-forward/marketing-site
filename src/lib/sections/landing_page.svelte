@@ -3,6 +3,7 @@
 	import initiateDownload from '$lib/pixel/initiateDownload';
 	import { lazyLoad } from '$lib/hooks/lazyLoad';
 	import Nav from './homepage_nav.svelte';
+	// TODO: rework copy to be more enterprise friendly / focused
 </script>
 
 <div class="flex flex-col w-full bg-blue min-h-[100vh] overflow-hidden relative">
@@ -31,9 +32,9 @@
 					class="laptop:w-[45%] big-laptop:mt-4 big-laptop:text-lg text-base text-blue_white font-sans-semi z-10 py-4 rounded-lg px-4 text-center tablet:text-start"
 				>
 					<span class="bg-blue">
-						Our app uses AI to bring you closer to your faith than ever before, offering
-						personalized devotions, extensive Bible readings, and deep verse interpretation,
-						alongside an enriched connection with your church. All in one place.
+						Whether you're on a personal faith journey, increasing engagement with a congregation,
+						or managing a large faith-based enterprise, our platform offers tailored solutions.
+						Experience the synergy of faith and innovation, all in one place.
 					</span>
 				</p>
 			</div>

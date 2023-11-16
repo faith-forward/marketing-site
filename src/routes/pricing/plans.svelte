@@ -5,72 +5,161 @@
 		level: string;
 		price: string;
 		subtitle: string | null;
-		features: string[];
+		features: { heading: string; subheading: string }[];
+		planType: 'individual' | 'church' | 'enterprise';
 	};
 
 	const individualPlans: PricingPlan[] = [
 		{
-			level: 'Basic plan',
+			level: 'Individual',
 			price: 'Free',
-			subtitle: null,
+			subtitle: 'Empower Your Faith Journey',
 			features: [
-				'Access to daily devotionals and sermons',
-				'Comprehensive Bible reading, listening, and search capabilities',
-				'Capability to save and share favorite verses, devotionals, and more',
-				'Personalized devotionals curated just for you',
-				'Unlimited access to personalized Bible study resources'
-			]
-		},
-		{
-			level: 'Premium plan',
-			price: '$1/month',
-			subtitle: 'Get everything in the Basic plan, plus...',
-			features: [
-				'Exclusive access to content from your church',
-				"Personalized content reflecting your church's unique beliefs and teachings",
-				'Inclusion of references to church content in personalized materials',
-				"Advanced AI-powered search within your church's feed"
+				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
+				{
+					heading: 'Personalized Devotionals',
+					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
+				},
+				{
+					heading: 'Daily Inspiration',
+					subheading: 'New classic devotionals and audio sermons every day.'
+				},
+				{
+					heading: 'The Bible, at Your Fingertips',
+					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
+				},
+				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
+				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
+				{
+					heading: 'Church Connection',
+					subheading: 'Seamlessly link with your church for exclusive content and updates.'
+				}
 			]
 		}
-	];
+	].map((plan) => ({ ...plan, planType: 'individual' }));
 
 	const churchPlans: PricingPlan[] = [
 		{
-			level: 'Premium Church Plan',
-			price: '$20/month',
-			subtitle: null,
+			level: 'Church: Basic',
+			price: 'Free',
+			subtitle: 'Engage Your Congregation Digitally',
 			features: [
-				'Advanced analytics and insight reports',
-				"Personalized content and devotionals reflecting your church's unique beliefs",
-				'Priority customer support and consultation services',
-				'Integration with external platforms for seamless content importing',
-				'Access to premium features and updates as they are released',
-				'Unlimited usage of the Writing Desk',
-				'Access to AI-powered writing tools',
-				'Premium access for your entire congregation'
+				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
+				{
+					heading: 'Personalized Devotionals',
+					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
+				},
+				{
+					heading: 'Daily Inspiration',
+					subheading: 'New classic devotionals and audio sermons every day.'
+				},
+				{
+					heading: 'The Bible, at Your Fingertips',
+					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
+				},
+				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
+				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
+				{
+					heading: 'Church Connection',
+					subheading: 'Seamlessly link with your church for exclusive content and updates.'
+				}
+			]
+		},
+		{
+			level: 'Church: Premium',
+			price: '$20/month',
+			subtitle: "Elevate Your Ministry's Impact",
+			features: [
+				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
+				{
+					heading: 'Personalized Devotionals',
+					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
+				},
+				{
+					heading: 'Daily Inspiration',
+					subheading: 'New classic devotionals and audio sermons every day.'
+				},
+				{
+					heading: 'The Bible, at Your Fingertips',
+					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
+				},
+				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
+				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
+				{
+					heading: 'Church Connection',
+					subheading: 'Seamlessly link with your church for exclusive content and updates.'
+				}
 			]
 		}
-	];
+	].map((plan) => ({ ...plan, planType: 'church' }));
+
+	const enterprisePlans: PricingPlan[] = [
+		{
+			level: 'Enterprise',
+			price: 'Contact Us',
+			subtitle: 'Scale Your Faith-Based Services',
+			features: [
+				{ heading: 'Access Anytime, Anywhere', subheading: 'Unlimited use of our mobile app.' },
+				{
+					heading: 'Personalized Devotionals',
+					subheading: 'On-demand, AI-powered content tailored to your spiritual needs.'
+				},
+				{
+					heading: 'Daily Inspiration',
+					subheading: 'New classic devotionals and audio sermons every day.'
+				},
+				{
+					heading: 'The Bible, at Your Fingertips',
+					subheading: 'Comprehensive Bible reader with powerful search capabilities.'
+				},
+				{ heading: 'Ask the Bible', subheading: 'Interactive, AI-assisted spiritual guidance.' },
+				{ heading: 'Save and Share', subheading: 'Bookmark and share your favorite content.' },
+				{
+					heading: 'Church Connection',
+					subheading: 'Seamlessly link with your church for exclusive content and updates.'
+				}
+			]
+		}
+	].map((plan) => ({ ...plan, planType: 'enterprise' }));
+
+	const allPlans = [...individualPlans, ...churchPlans, ...enterprisePlans];
 </script>
 
-<h2 class="text-2xl text-boldGrey font-sans-bold self-start">For Individuals</h2>
-<p class="font-sans text-grey self-start">
-	Explore scripture, strengthen your faith, and connect more deeply with your church. Choose the
-	plan that best supports your spiritual journey.
-</p>
-<div class="flex flex-col tablet:flex-row tablet:space-x-8 w-full mt-8">
-	{#each individualPlans as plan (plan.level)}
+<div class="flex flex-row flex-wrap tablet:space-x-8 w-[80%] mx-auto mt-8">
+	{#each allPlans as plan (plan.level)}
 		<PricingCard {...plan} />
 	{/each}
 </div>
 
-<h2 class="text-2xl text-boldGrey font-sans-bold self-start mt-32">For Churches</h2>
-<p class="font-sans text-grey self-start">
-	Enhance your administrative capabilities and elevate your congregation's engagement. Discover the
-	plan that aligns with your church's mission and needs.
-</p>
-<div class="flex flex-col tablet:flex-row tablet:space-x-8 w-full mt-8">
-	{#each churchPlans as plan (plan.level)}
-		<PricingCard {...plan} forChurches />
-	{/each}
-</div>
+<!-- <h2 class="text-2xl text-boldGrey font-sans-bold self-start mt-16">For Individuals</h2> -->
+<!-- <p class="font-sans text-grey self-start"> -->
+<!-- 	Explore scripture, strengthen your faith, and connect more deeply with your church. Choose the -->
+<!-- 	plan that best supports your spiritual journey. -->
+<!-- </p> -->
+<!-- <div class="flex flex-col tablet:flex-row tablet:space-x-8 w-full mt-8"> -->
+<!-- 	{#each individualPlans as plan (plan.level)} -->
+<!-- 		<PricingCard {...plan} planType="individual" /> -->
+<!-- 	{/each} -->
+<!-- </div> -->
+<!---->
+<!-- <h2 class="text-2xl text-boldGrey font-sans-bold self-start mt-16">For Churches</h2> -->
+<!-- <p class="font-sans text-grey self-start"> -->
+<!-- 	Enhance your administrative capabilities and elevate your congregation's engagement. Discover the -->
+<!-- 	plan that aligns with your church's mission and needs. -->
+<!-- </p> -->
+<!-- <div class="flex flex-col tablet:flex-row tablet:space-x-8 w-full mt-8"> -->
+<!-- 	{#each churchPlans as plan (plan.level)} -->
+<!-- 		<PricingCard {...plan} planType="church" /> -->
+<!-- 	{/each} -->
+<!-- </div> -->
+<!---->
+<!-- <h2 class="text-2xl text-boldGrey font-sans-bold self-start mt-16">For Enterprise</h2> -->
+<!-- <p class="font-sans text-grey self-start"> -->
+<!-- 	We offer custom integration services for organizations looking to leverage our AI-powered platform -->
+<!-- 	to enhance their own products and services. -->
+<!-- </p> -->
+<!-- <div class="flex flex-col tablet:flex-row tablet:space-x-8 w-full mt-8"> -->
+<!-- 	{#each enterprisePlans as plan (plan.level)} -->
+<!-- 		<PricingCard {...plan} planType="enterprise" /> -->
+<!-- 	{/each} -->
+<!-- </div> -->

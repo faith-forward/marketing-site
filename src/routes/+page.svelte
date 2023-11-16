@@ -1,8 +1,12 @@
 <script>
 	import ForChurches from '$lib/sections/for_churches.svelte';
-	import ForIndividuals from '../lib/sections/for_individuals.svelte';
-	import LandingPage from '../lib/sections/landing_page.svelte';
-	import TestimonialsPage from '../lib/sections/testimonials_page.svelte';
+	import ForIndividuals from '$lib/sections/for_individuals.svelte';
+	import LandingPage from '$lib/sections/landing_page.svelte';
+	import Plans from './pricing/plans.svelte';
+	import TestimonialsPage from '$lib/sections/testimonials_page.svelte';
+	// TODO: add enterprise section
+	// TODO: rework copy to be more enterprise friendly / focused
+	// TODO: fold pricing into this page
 </script>
 
 <svelte:head>
@@ -21,6 +25,14 @@
 	<LandingPage />
 	<ForIndividuals />
 	<ForChurches />
+	<!-- <ForEnterprise /> -->
+	<div class="flex flex-col items-center justify-center mt-32">
+		<h1 class="text-4xl font-sans-condensed text-darkBlue text-center mt-16 mb-8">Plans</h1>
+		<div class="w-1/2 h-1 bg-darkBlue mb-8" />
+		<div>
+			<Plans />
+		</div>
+	</div>
 	<TestimonialsPage />
 </main>
 

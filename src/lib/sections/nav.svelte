@@ -14,21 +14,6 @@
 		<a href="/"><h2 class="text-2xl text-blue font-sans-bold">Faith Forward</h2></a>
 		<div class="space-x-8 items-center hidden laptop:flex">
 			<a href="/" class="text-grey font-sans-semi text-lg">About</a>
-			<a href="/churches" class="text-grey font-sans-semi text-lg">For Churches</a>
-			<a
-				href="/pricing"
-				class={`text-grey font-sans-semi text-lg ${active === 'pricing' && 'active'}`}>Pricing</a
-			>
-			<a
-				href="/devotionals"
-				class={`text-grey font-sans-semi text-lg ${active === 'devotionals' && 'active'}`}
-			>
-				Devotionals
-			</a>
-			<a
-				href="/sermons"
-				class={`text-grey font-sans-semi text-lg ${active === 'sermons' && 'active'}`}>Sermons</a
-			>
 			<a href="/blog" class={`text-grey font-sans-semi text-lg ${active === 'blog' && 'active'}`}
 				>Blog</a
 			>
@@ -66,8 +51,6 @@
 	>
 		<ul class="space-y-2 text-right">
 			<li><a href="/" class="text-grey font-sans-semi">About</a></li>
-			<li><a href="/devotionals" class="text-grey font-sans-semi">Devotionals</a></li>
-			<li><a href="/sermons" class="text-gray font-sams-semi">Sermons</a></li>
 			<li><a href="/blog" class="text-grey font-sans-semi">Blog</a></li>
 			<li>
 				<a
