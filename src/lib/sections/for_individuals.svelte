@@ -58,12 +58,16 @@
 	class="h-100v min-h-[1000px] max-w-[1800px] flex flex-col items-center px-4"
 	id="for_individuals"
 >
-	<h2 class="mt-16 text-4xl font-sans-bold text-boldGrey text-center leading-snug" use:fadeIn>
-		Faith Forward for Individuals
-	</h2>
-	<p class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi" use:fadeIn>
-		A full suite of features to help you connect with your faith
+	<h1 class="text-4xl font-sans-condensed text-darkBlue text-center mt-16 leading-snug" use:fadeIn>
+		For Individuals
+	</h1>
+	<p
+		class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi text-darkBlue"
+		use:fadeIn
+	>
+		Transform your spiritual journey with personalized, AI-driven faith experiences
 	</p>
+	<div class="w-1/2 h-1 bg-darkBlue my-8" use:fadeIn />
 	<div
 		class="slideshow w-full flex mx-32 space-x-8 mt-16 overflow-x-scroll overflow-y-clip mb-16 py-4 "
 		use:fadeIn

@@ -1,6 +1,7 @@
 <script>
 	import ForChurches from '$lib/sections/for_churches.svelte';
 	import ForIndividuals from '$lib/sections/for_individuals.svelte';
+	import ForEnterprise from '$lib/sections/for_enterprise.svelte';
 	import LandingPage from '$lib/sections/landing_page.svelte';
 	import Plans from './pricing/plans.svelte';
 	import TestimonialsPage from '$lib/sections/testimonials_page.svelte';
@@ -25,7 +26,7 @@
 	<LandingPage />
 	<ForIndividuals />
 	<ForChurches />
-	<!-- <ForEnterprise /> -->
+	<ForEnterprise />
 	<div class="flex flex-col items-center justify-center mt-32">
 		<h1 class="text-4xl font-sans-condensed text-darkBlue text-center mt-16 mb-8">Plans</h1>
 		<div class="w-1/2 h-1 bg-darkBlue mb-8" />
