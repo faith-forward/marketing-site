@@ -73,8 +73,17 @@
 	const allPlans = [...individualPlans, ...churchPlans, ...enterprisePlans];
 </script>
 
-<div class="flex flex-row flex-wrap tablet:space-x-8 w-[80%] mx-auto mt-8">
+<div class="grid-container grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 	{#each allPlans as plan (plan.level)}
 		<PricingCard {...plan} />
 	{/each}
 </div>
+
+<style>
+	.grid-container {
+		display: grid;
+		gap: 1rem;
+		width: 80%;
+		margin: auto;
+	}
+</style>

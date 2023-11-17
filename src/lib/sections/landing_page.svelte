@@ -3,7 +3,6 @@
 	import initiateDownload from '$lib/pixel/initiateDownload';
 	import { lazyLoad } from '$lib/hooks/lazyLoad';
 	import Nav from './homepage_nav.svelte';
-	// TODO: rework copy to be more enterprise friendly / focused
 </script>
 
 <div class="flex flex-col w-full bg-blue min-h-[100vh] overflow-hidden relative">

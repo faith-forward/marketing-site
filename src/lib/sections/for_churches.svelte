@@ -98,10 +98,7 @@
 	</linearGradient>
 </svg>
 
-<div
-	class="h-100v min-h-[1000px] max-w-[1800px] flex flex-col items-center px-4"
-	id="for_individuals"
->
+<div class="h-100v min-h-[1000px] max-w-[1800px] flex flex-col items-center px-4" id="for_churches">
 	<h1 class="text-4xl font-sans-condensed text-darkBlue text-center mt-16 leading-snug" use:fadeIn>
 		For Churches
 	</h1>

@@ -89,27 +89,23 @@
 </svg>
 
 <div
-	class="h-100v min-h-[1000px] max-w-[1800px] flex flex-col items-center px-4 mt-32"
-	id="for_individuals"
+	class="max-w-[1800px] flex flex-col items-center px-4 bg-enterpriseBackground pt-16 pb-32"
+	id="for_enterprise"
 >
-	<h1 class="text-4xl font-sans-condensed text-darkBlue text-center mt-16 leading-snug" use:fadeIn>
+	<h1 class="text-4xl font-sans-condensed text-white text-center mt-16 leading-snug" use:fadeIn>
 		For Enterprise
 	</h1>
-	<p
-		class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi text-darkBlue"
-		use:fadeIn
-	>
-		Empower your organization with customizable, faith-centric technology solutions
+	<p class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi text-white" use:fadeIn>
+		Empower your organization with customizable, faith-centric technology solutions.
 	</p>
-	<div class="w-1/2 h-1 bg-darkBlue my-8" use:fadeIn />
 	<div
 		class="grid grid-cols-1 laptop:grid-cols-2 gap-32 desktop:px-64 laptop:px-16 tablet:px-8 font-sans mt-24"
 	>
 		{#each features as { name, description, icon, style, gradientId } (name)}
 			<div class="flex flex-col items-center text-center" use:fadeIn>
 				<Fa {icon} class="text-6xl mb-8" primaryColor={`url(${gradientId})`} {style} />
-				<h3 class="font-semibold text-lg mb-1 text-boldGrey">{name}</h3>
-				<p class="text-grey text-left">{description}</p>
+				<h3 class="font-semibold text-lg mb-1 text-white">{name}</h3>
+				<p class="text-white text-left">{description}</p>
 			</div>
 		{/each}
 	</div>

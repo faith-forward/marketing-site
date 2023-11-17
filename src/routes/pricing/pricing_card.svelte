@@ -8,16 +8,26 @@
 	export let subtitle: string | null = null;
 	export let features: string[] = [];
 	export let planType: 'individual' | 'church' | 'enterprise';
+	// TODO: change level color to something that pops better on church purple
 </script>
 
+<!-- <div -->
+<!-- 	class={`flex flex-col justify-between p-6 ${ -->
+<!-- 		planType === 'church' -->
+<!-- 			? 'bg-churchBackground' -->
+<!-- 			: planType === 'enterprise' -->
+<!-- 			? 'bg-enterpriseBackground' -->
+<!-- 			: 'bg-white' -->
+<!-- 	} mb-8 tablet:mb-0 rounded-lg shadow-lg flex-1`} -->
+<!-- > -->
 <div
-	class={`flex flex-col justify-between p-6 ${
+	class={`pricing-card ${
 		planType === 'church'
 			? 'bg-churchBackground'
 			: planType === 'enterprise'
 			? 'bg-enterpriseBackground'
 			: 'bg-white'
-	} mb-8 tablet:mb-0 rounded-lg shadow-lg flex-1`}
+	}`}
 >
 	<div>
 		<h2
@@ -90,3 +100,14 @@
 		</a>
 	{/if}
 </div>
+
+<style>
+	.pricing-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1.5rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+</style>
