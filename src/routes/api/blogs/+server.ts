@@ -1,4 +1,7 @@
 import { apiBaseUrl } from '$lib/config/api_config';
+import type { Post } from '$lib/types/blog';
+import type { CMSResponse } from '$lib/types/cmsResponse';
+import { populatePostDefaults } from '$lib/util/populatePostDefaults';
 import { error, type RequestHandler } from '@sveltejs/kit';
 import qs from 'qs';
 
@@ -18,10 +21,16 @@ export const GET: RequestHandler = async ({ url }) => {
 		});
 
 		const res = await fetch(`${apiBaseUrl}/api/articles?${query}`);
-		const json = await res.json();
+		const json: CMSResponse<Post> = await res.json();
+		if (!json.data) throw new Error('No data returned from CMS');
+		const postsWithDefaults = [];
+		for (const post of json.data) {
+			const populatedPost = populatePostDefaults(post.attributes);
+			postsWithDefaults.push(populatedPost);
+		}
 		return new Response(
 			JSON.stringify({
-				posts: json
+				posts: postsWithDefaults
 			})
 		);
 	} catch (err) {

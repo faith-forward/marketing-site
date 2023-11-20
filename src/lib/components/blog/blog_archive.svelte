@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Post } from '$lib/types/blog';
-	import type { CMSResponse } from '$lib/types/cmsResponse';
 	import { onMount } from 'svelte';
 	import BlogListing from './blog_listing.svelte';
 
@@ -8,12 +7,12 @@
 	let page = 1;
 	let loading = true;
 
-	const fetchDevotionals = async () => {
+	const fetchPosts = async () => {
 		loading = true;
 		try {
 			const res = await fetch(`/api/blogs?page=${page}`);
-			const data: { posts: CMSResponse<Post> } = await res.json();
-			posts = posts.concat(data.posts.data.map((item) => item.attributes));
+			const data: { posts: Post } = await res.json();
+			posts = posts.concat(data.posts);
 		} catch (err) {
 			console.error(err);
 		} finally {
@@ -22,7 +21,7 @@
 	};
 
 	onMount(() => {
-		fetchDevotionals();
+		fetchPosts();
 	});
 </script>
 
@@ -41,7 +40,7 @@
 				class="bg-orange rounded-full text-white font-sans-semi px-4 py-2"
 				on:click={() => {
 					page++;
-					fetchDevotionals();
+					fetchPosts();
 				}}
 			>
 				{loading ? 'Loading...' : 'Read Older Posts'}
