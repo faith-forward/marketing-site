@@ -1,14 +1,12 @@
 <script lang="ts">
 	import { fadeIn } from '$lib/hooks/fadeIn';
 	import {
-		faChartBar,
-		faDollar,
-		faEdit,
-		faListUl,
-		faUsers,
+		faCogs,
+		faNetworkWired,
+		faScaleBalanced,
+		faHeadset,
 		type IconDefinition
 	} from '@fortawesome/free-solid-svg-icons';
-	// TODO: incorporate screenshots, like the individuals section does
 
 	import Fa from 'svelte-fa';
 
@@ -20,40 +18,32 @@
 		style?: string;
 	}[] = [
 		{
-			name: 'Enhanced Analytics',
+			name: 'Custom Solutions',
 			description:
-				'Understand your congregation better with in-depth user analytics. Gain insights on active users, the most-read Bible verses, and trending topics within your community.',
-			icon: faChartBar,
-			gradientId: '#blue-to-green',
-			style: 'transform:scaleX(-1); rotate:90deg;'
+				'Tailor-made technology solutions that align seamlessly with your organization’s specific faith-based needs and goals.',
+			icon: faCogs,
+			gradientId: '#blue-to-green'
 		},
 		{
-			name: 'Content Manager',
+			name: 'Seamless Integration',
 			description:
-				'Create, publish, and manage your sermons, devotionals, and more in one central location. Seamlessly integrate third-party sources, like YouTube, to bring a variety of content to your congregation.',
-			icon: faListUl,
+				'Integrate Faith Forward services smoothly with your existing systems, enhancing your technological ecosystem without disruption.',
+			icon: faNetworkWired,
 			gradientId: '#purple-to-blue'
 		},
 		{
-			name: 'Writing Desk',
+			name: 'Scalable Technology',
 			description:
-				'Our unique AI-powered tool designed to assist in your sermon and devotional creation process. Generate content on any topic and receive instant feedback to enhance your writing.',
-			icon: faEdit,
+				'Advanced, scalable solutions designed to grow with your organization, ensuring long-term sustainability and flexibility.',
+			icon: faScaleBalanced,
 			gradientId: '#yellow-to-orange'
 		},
 		{
-			name: 'Boosted Engagement',
+			name: 'Dedicated Support',
 			description:
-				"Deepen your congregation's engagement with personalized content referencing your church's teachings and beliefs.",
-			icon: faUsers,
+				'Premium, round-the-clock support to ensure your organization receives the assistance it needs whenever it needs it.',
+			icon: faHeadset,
 			gradientId: '#blue-to-red'
-		},
-		{
-			name: 'Easy Giving',
-			description:
-				'Facilitate contributions to your church with a customizable "Give" link, creating a simple and straightforward donation process for your community.',
-			icon: faDollar,
-			gradientId: '#green-to-green'
 		}
 	];
 </script>
@@ -98,25 +88,24 @@
 	</linearGradient>
 </svg>
 
-<div class="h-100v min-h-[1000px] max-w-[1800px] flex flex-col items-center px-4" id="for_churches">
-	<h1 class="text-4xl font-sans-condensed text-darkBlue text-center mt-16 leading-snug" use:fadeIn>
-		For Churches
+<div
+	class="max-w-[1800px] flex flex-col items-center px-4 bg-enterpriseBackground pt-16 pb-32"
+	id="for_enterprise"
+>
+	<h1 class="text-4xl font-sans-condensed text-white text-center mt-16 leading-snug" use:fadeIn>
+		For Enterprise
 	</h1>
-	<p
-		class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi text-darkBlue"
-		use:fadeIn
-	>
-		Enhance your ministry's reach and impact with innovative digital engagement tools
+	<p class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi text-white" use:fadeIn>
+		Empower your organization with customizable, faith-centric technology solutions.
 	</p>
-	<div class="w-1/2 h-1 bg-darkBlue my-8" use:fadeIn />
 	<div
 		class="grid grid-cols-1 laptop:grid-cols-2 gap-32 desktop:px-64 laptop:px-16 tablet:px-8 font-sans mt-24"
 	>
 		{#each features as { name, description, icon, style, gradientId } (name)}
 			<div class="flex flex-col items-center text-center" use:fadeIn>
 				<Fa {icon} class="text-6xl mb-8" primaryColor={`url(${gradientId})`} {style} />
-				<h3 class="font-semibold text-lg mb-1 text-boldGrey">{name}</h3>
-				<p class="text-grey text-left">{description}</p>
+				<h3 class="font-semibold text-lg mb-1 text-white">{name}</h3>
+				<p class="text-white text-left">{description}</p>
 			</div>
 		{/each}
 	</div>

@@ -25,10 +25,16 @@
 	];
 </script>
 
-<section class="flex flex-col bg-paper px-4 tablet:px-16 desktop:px-32 items-center mt-16">
-	<h2 class="mt-16 text-4xl font-sans-bold text-boldGrey text-center leading-snug" use:fadeIn>
-		Discover Faith Forward for Churches
-	</h2>
+<div class="max-w-[1800px] flex flex-col items-center px-4" id="for_churches">
+	<h1 class="text-4xl font-sans-condensed text-darkBlue text-center mt-16 leading-snug" use:fadeIn>
+		For Churches
+	</h1>
+	<p
+		class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi text-darkBlue"
+		use:fadeIn
+	>
+		Enhance your ministry's reach and impact with innovative digital engagement tools.
+	</p>
 	<div class="my-16 tablet:w-[75vw] laptop:w-[50vw]">
 		<img
 			use:lazyLoad={'/images/for churches.svg'}
@@ -40,14 +46,16 @@
 		class="flex flex-col tablet:flex-row items-start desktop:px-64 big-laptop:px-32 laptop:px-16 tablet:px-8 mt-16 w-full tablet:space-x-24"
 	>
 		<div class="flex flex-col flex-1">
-			<h3 class="text-center text-lg font-sans-semi text-boldGre">What we do</h3>
+			<h3 class="text-center text-lg font-sans-semi text-boldGrey">What we do</h3>
 			<p class="text-grey font-sans mt-2">
-				Unlock a new era of church management with Faith Forward, a revolutionary Church Management Software (ChMS) 
-				that seamlessly merges technology and spirituality. Our platform empowers you to foster growth, 
-				effortlessly connecting, organizing, and expanding your church community.<br /><br />
-				Discover a comprehensive solution designed to meet your unique needs. Faith Forward integrates content management, 
-				community engagement, personalized devotions, and insightful analytics into a unified digital hub. 
-				Every interaction, devotional, and message becomes an opportunity to cultivate profound connections within your church.
+				Unlock a new era of church management with Faith Forward, a revolutionary Church Management
+				Software (ChMS) that seamlessly merges technology and spirituality. Our platform empowers
+				you to foster growth, effortlessly connecting, organizing, and expanding your church
+				community.<br /><br />
+				Discover a comprehensive solution designed to meet your unique needs. Faith Forward integrates
+				content management, community engagement, personalized devotions, and insightful analytics into
+				a unified digital hub. Every interaction, devotional, and message becomes an opportunity to cultivate
+				profound connections within your church.
 			</p>
 		</div>
 		<div class="flex flex-col flex-1 mt-24 tablet:mt-0">
@@ -66,10 +74,4 @@
 			</ul>
 		</div>
 	</div>
-	<!-- <p
-		class="text-grey mt-4 leading-snug text-center text-lg font-sans-semi max-w-[60vw] leading-relaxed"
-		use:fadeIn
-	>
-		Unlock innovative pathways to better involve your congregation with your unique teachings
-	</p> -->
-</section>
+</div>

@@ -19,7 +19,8 @@ module.exports = {
 				green: '#8fc9bd',
 				greenWhite: '#f0fffc',
 				orange: '#ff6745',
-				churchBackground: '#24313b'
+				churchBackground: '#8440f7',
+				enterpriseBackground: '#24313b'
 			},
 			height: {
 				'100v': '100vh'

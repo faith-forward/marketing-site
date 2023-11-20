@@ -11,16 +11,10 @@
 </script>
 
 <nav class="px-16 desktop:px-32 pb-16 pt-8 desktop:pt-16 justify-between hidden laptop:flex">
-	<a href="/" class="hover:cursor-pointer">
-		<h2 class={`text-2xl ${textColor} font-sans-bold`}>Faith Forward</h2>
-	</a>
+	<a href="/" class="hover:cursor-pointer"
+		><h2 class={`text-2xl ${textColor} font-sans-bold`}>Faith Forward</h2></a
+	>
 	<div class={`flex space-x-8 items-center ${textColor}`}>
-		<a href={churchVersion ? '/' : '/churches'} class={`font-sans-semi text-lg link ${churchVersion && 'active'}`}>
-			{churchVersion ? 'For You' : 'For Churches'}
-		</a>
-		<a href="/pricing" class="font-sans-semi text-lg link">Pricing</a>
-		<a href="/devotionals" class="font-sans-semi text-lg link">Devotionals</a>
-		<a href="/sermons" class="font-sans-semi text-lg link">Sermons</a>
 		<a href="/blog" class="font-sans-semi text-lg link">Blog</a>
 		<a
 			href="https://apps.apple.com/us/app/faith-forward/id1661516199"
@@ -63,14 +57,6 @@
 	</div>
 	<div class={`laptop:hidden ${!showDropdown ? 'hidden' : 'flex'} flex-col items-end mt-2 w-full`}>
 		<ul class="space-y-2 text-right">
-			<li>
-				<a href={churchVersion ? '/' : '/churches'} class="text-white font-sans-semi">
-					{churchVersion ? 'For You' : 'For Churches'}
-				</a>
-			</li>
-			<li><a href="/pricing" class="text-white font-sans-semi">Pricing</a></li>
-			<li><a href="/devotionals" class="text-white font-sans-semi">Devotionals</a></li>
-			<li><a href="/sermons" class="text-white font-sans-semi">Sermons</a></li>
 			<li><a href="/blog" class="text-white font-sans-semi">Blog</a></li>
 			<li>
 				<a
@@ -106,10 +92,6 @@
 	}
 
 	a.link:hover::before {
-		width: 100%;
-	}
-
-	a.link.active::before {
 		width: 100%;
 	}
 </style>
