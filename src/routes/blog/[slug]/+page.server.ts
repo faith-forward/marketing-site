@@ -1,6 +1,7 @@
 // import fetch from 'node-fetch';
 import { apiBaseUrl } from '$lib/config/api_config';
 import { logView } from '$lib/pixel/log';
+import { populatePostDefaults } from '$lib/util/populatePostDefaults';
 import qs from 'qs';
 import type { PageServerLoad } from './$types';
 
@@ -41,7 +42,7 @@ export const load: PageServerLoad = async ({ fetch, params, getClientAddress, re
 			client_user_agent
 		});
 		return {
-			post: json.data[0].attributes
+			post: populatePostDefaults(json.data[0].attributes)
 		};
 	} catch (err) {
 		console.log(err);
