@@ -59,6 +59,18 @@
 					<div class="flex space-x-2 items-center">
 						<Fa icon={faFileAlt} /><a href="/terms-of-service" class="link">Terms of Service</a>
 					</div>
+					<a
+						target="_blank"
+						rel="noreferrer"
+						href="https://elevenlabs.com"
+						aria-label="Eleven Labs Link"
+					>
+						<img
+							use:lazyLoad={'/images/eleven-labs-grants-white.png'}
+							alt="Eleven Labs Grants"
+							class="w-40 mt-4"
+						/>
+					</a>
 				</div>
 			</div>
 
