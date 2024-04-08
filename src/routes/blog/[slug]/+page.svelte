@@ -21,6 +21,10 @@
 			return '<p class="text-xl text-boldGrey font-sans-bold">' + quote + '</p>';
 		};
 
+		renderer.image = (href: string, title: string, text: string) => {
+			return `<img src="${href}" alt="${text} ${title}" class="w-full mt-24 rounded-lg shadow-lg" />`;
+		};
+
 		let lines = post.content.split('\n');
 		// remove whitespace lines that appear after any lines that start with ##
 		lines = lines.filter((line, index) => {
@@ -42,6 +46,10 @@
 				return `<p class="text-lg text-boldGrey font-serif-bold leading-relaxed"><span class="bg-[#fff09c]">${line.slice(
 					1
 				)}</span></p>`;
+			} else if (line.startsWith('- ')) {
+				// list
+				// return `<li class="leading-relaxed ml-4 py-0">${line.slice(2)}</li>`;
+				return line.replace(/- /, '<span class="mr-2">&#x2022; </span>');
 			} else {
 				return line.replace(/<br\s*\/?>/gi, '\n'); // replace <br> with \n for other lines
 			}
@@ -60,7 +68,10 @@
 		if (post.SEO.SharedImage) {
 			shareImage = post.SEO.SharedImage.media.data.attributes.formats.large;
 		} else {
-			shareImage = post.cover.data.attributes.formats.large;
+			shareImage =
+				post.cover.data.attributes.formats.large ||
+				post.cover.data.attributes.formats.medium ||
+				post.cover.data.attributes.formats.small;
 		}
 	}
 
